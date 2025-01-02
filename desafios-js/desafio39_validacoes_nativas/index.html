@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Validações nativas</title>
+</head>
+<body>
+    <div class="form">
+        <form>
+            <label>Digite seu principal email:</label>
+            <input type="email" id="Email" class="Email" class="cor_vermelha" placeholder="Digite seu email" required>
+            <label>Digite um valor:</label>
+            <input type="number" id="Number" class="Number">
+            <label>Crie uma senha forte:</label>
+            <input type="password" id="Password" class="Password" minlength="6" maxlength="20" required placeholder="Senha de 6 a 20 caracteres">
+            <button id="btn_verificar" class="btn_verificar" >Verificar informações</button>
+        </form>
+        <div class="password_tips">
+            <p>Senha deve conter números, letras e caracteres</p>
+            <p>Senha deve conter, no mínimo, 1 caractere especial</p>
+            <p>Senha deve conter letra maiúsculas e minúsculas</p>
+            <p>Números de 0 a 9</p>
+            <p>Exemplo de senha: lkajodGKUHUI1896164&¨%$</p>
+            <p id="texto_senha"></p>
+        </div>
+    </div>
+    <script src="desafios.js"></script>
+</body>
+</html>

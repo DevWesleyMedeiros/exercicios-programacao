@@ -1,0 +1,2 @@
+Escreva um programa que calcule e exiba a média da nota dos alunos de uma turma em uma prova. O número de
+alunos é desconhecido. Os dados de um aluno são: número de matrícula e a sua nota na prova em questão.

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(sumNiceValues(1));
+
+        function sumNiceValues(value) {
+            if (value === 0) {
+                console.log("Valor dado é zero");
+                return;
+            }
+
+            if (value < 0) {
+                value = Math.abs(value);
+            }
+
+            if (value > 1) {
+                let arrayNiceValue = [];
+                let sumNiceValues = 0;
+
+                for (let v = 2; v <= value; v++) {
+                if (v % 2 === 0) continue;
+
+                if (isPrime(v) && (v === 2 || countDivisors(v) <= 2)) {
+                    arrayNiceValue.push(v);
+                    sumNiceValues += v;
+                }
+                }
+
+                for (const n of arrayNiceValue) {
+                    console.log(n);
+                }
+
+                return `A soma dos valores primos de 2 até ${value} é ${sumNiceValues}`;
+            } else {
+                return console.log("O valor " + value + " não é PRIMO");
+            }
+            }
+
+            function isPrime(n) {
+            if (n <= 1) return false;
+            if (n <= 3) return true;
+            if (n % 2 === 0 || n % 3 === 0) return false;
+
+            for (let i = 5; i * i <= n; i += 6) {
+                if (n % i === 0 || n % (i + 2) === 0) return false;
+            }
+
+            return true;
+            }
+
+            function countDivisors(n) {
+            let count = 0;
+            for (let i = 1; i * i <= n; i++) {
+                if (n % i === 0) {
+                    count += (i === n / i) ? 1 : 2;
+                }
+            }
+            return count;
+        }
+    </script>
+</body>
+</html>

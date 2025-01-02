@@ -1,0 +1,23 @@
+Exercício 1: Crie uma classe chamada Pessoa com propriedades nome e idade. Em seguida, crie um objeto pessoa1 e imprima suas propriedades.(FINALIZADO);
+
+Exercício 2: Métodos de Classe Adicione um método à classe Pessoa chamado cumprimentar que imprime uma saudação usando o nome da pessoa. Chame esse método para o objeto pessoa1 criado no exercício anterior.
+(FINALIZADO);
+
+Exercício 3: Herança Crie uma classe chamada Estudante que herda da classe Pessoa. Adicione uma propriedade adicional chamada curso à classe Estudante. Crie um objeto estudante1 e imprima suas propriedades.
+(FINALIZADO);
+
+Exercício 4: Método Sobrescrito Sobrescreva o método cumprimentar na classe Estudante para incluir o curso na saudação. Chame esse método para o objeto estudante1.
+(FINALIZADO);
+
+Exercício 5: Encapsulamento Adicione métodos de acesso (getters e setters) para as propriedades nome, idade e curso na classe Estudante.
+(FINALIZADO);
+
+Exercício 6: Polimorfismo Crie uma função chamada apresentar que aceita um objeto Pessoa como parâmetro e chama o método cumprimentar. Teste a função com os objetos pessoa1 e estudante1.
+
+Exercício 7: Composição Crie uma classe chamada Turma que possui uma lista de objetos Estudante. Adicione métodos para adicionar e remover estudantes da turma.
+
+Exercício 8: Métodos Estáticos Adicione um método estático à classe Pessoa que retorna uma mensagem genérica de saudação. Chame esse método sem criar uma instância da classe.
+
+Exercício 9: Mixins Crie um mixin chamado Trabalhador com uma propriedade cargo e um método trabalhar. Aplique esse mixin à classe Pessoa.
+
+Exercício 10: Construtor Personalizado Crie uma classe chamada Animal com propriedades nome e tipo. Adicione um construtor que aceita valores padrão caso nenhum seja fornecido. Crie objetos animal1 com e sem argumentos no construtor.

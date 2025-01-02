@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lista de sepermercados</title>
+</head>
+<body>
+    <header>
+        <h1>Lista de supermercado</h1>
+    </header>
+    <div class="lista_cadastro">
+        <input type="text" placeholder="Nome do produto" name="nome">
+        <input type="number" name="valor" step="0.01" title="Número deve ser até 2 casas decimais">
+        <input type="submit" name="acao" value="cadastrar">
+    </div>
+    <div class="lista_produtos">
+        <!-- Elementos vão ser criados via Js -->
+    </div>
+    <div class="soma_produtos">
+        <h2>
+            <span id="soma_total"> Total: 0<!--valor com js--></span>
+        </h2>
+    </div>
+    <button id="limpar">Limpar</button>
+    <script src="script.js"></script>
+</body>
+</html>

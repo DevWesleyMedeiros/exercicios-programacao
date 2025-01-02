@@ -1,0 +1,74 @@
+Nível 1: Entrada, Processamento e Saída:
+	ex001: Finalizado
+	ex002: Finalizado
+	ex003: Finalizado
+	ex004: Finalizado
+	ex005: Finalizado
+	ex006: Finalizado
+	ex007: Finalizado
+	ex008: Finalizado
+	ex009: Finalizado
+	ex0010: Finalizado
+
+Nível 2: Estruturas Condicionais:
+	ex0011: Finalizado
+	ex0012: Finalizado
+	ex0013: Finalizado
+	ex0014: Finalizado
+	ex0015: Finalizado
+	ex0016: Finalizado
+	ex0017: Finalizado
+	ex0018: Finalizado
+	ex0019: Finalizado
+	ex0020: Finalizado
+	ex0021: Finalizado
+	ex0022: Finalizado
+
+Nível 3: Estrutura de Seleção:
+	ex0023: Finalizado
+	ex0024: Finalizado
+	ex0025: Finalizado
+
+Nível 4: Estruturas de Repetição:
+	ex0026: Finalizado
+	ex0027: Finalizado
+	ex0028: Finalizado
+	ex0029: Finalizado
+	ex0030: Finalizado
+	ex0031: Finalizado
+	ex0032: Finalizado
+	ex0033: Finalizado
+	ex0034: Finalizado
+	ex0035: Finalizado
+	ex0037: Finalizado
+	ex0038: Finalizado
+	ex0039: Finalizado
+	ex0040: Finalizado
+	ex0041: Finalizado
+	ex0042: Finalizado
+	ex0043: Finalizado
+	ex0044: Finalizado
+
+Nível 5: Vetores e Matrizes
+	ex0045: Finalizado
+	ex0046: Finalizado
+	ex0047: Finalizado
+	ex0048: Finalizado
+	ex0049: Finalizado
+	ex0050: Finalizado
+	ex0051: Finalizado
+	ex0052: Finalizado
+	ex0053: Finalizado
+	ex0054: Finalizado
+	ex0055: Finalizado
+	ex0056: Finalizado
+	ex0057: Finalizado
+	ex0058: Finalizado
+	ex0059: Finalizado
+
+Nível 6: Métodos:
+	ex0060: Não Finalizado
+	ex0061: Finalizado
+	ex0062: Finalizado
+	ex0063: Finalizado
+

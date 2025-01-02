@@ -1,0 +1,8 @@
+Desafio 1: Remover caracteres repetidos
+Escreva uma função que recebe uma string como entrada e remove os caracteres repetidos, mantendo apenas a primeira ocorrência de cada caractere.
+
+Desafio 2: Contar vogais
+Escreva uma função que recebe uma string como entrada e retorna o número de vogais (A, E, I, O, U) presentes na string.
+
+Desafio 3: Inverter palavras
+Escreva uma função que recebe uma frase como entrada e inverte a ordem das palavras.

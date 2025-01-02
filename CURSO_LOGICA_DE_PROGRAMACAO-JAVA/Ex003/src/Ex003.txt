@@ -1,0 +1,2 @@
+Desenvolver uma classe em Java que represente uma estrutura de dados do tipo Pilha (Stack), utilizando práticas recomendadas de programação orientada a objetos. A classe deve permitir as operações básicas de uma pilha: empilhar (push), desempilhar (pop), e verificar o elemento no topo (peek). Além disso, a pilha deve suportar a verificação de se está vazia (isEmpty).
+Use a ideia do LIFO - last in first out, ou seja, empilha um item, desempilha o mesmo item colocado por último

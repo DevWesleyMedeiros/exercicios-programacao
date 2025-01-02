@@ -1,0 +1,5 @@
+Durante uma corrida de automóveis com N voltas de duração foram anotados para um piloto, na ordem, os
+tempos registrados em cada volta. Fazer um programa para ler os tempos das N voltas, calcular e imprimir:
+i. melhor tempo;
+ii. a volta em que o melhor tempo ocorreu;
+iii. tempo médio das N voltas;

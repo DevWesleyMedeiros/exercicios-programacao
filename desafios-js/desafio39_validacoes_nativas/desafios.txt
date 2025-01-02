@@ -1,0 +1,6 @@
+
+Desafio 1 - Crie uma função chamada validarEmail que recebe um parâmetro email e retorna verdadeiro se o formato do e-mail for válido e falso caso contrário. Utilize uma validação nativa para realizar essa verificação.
+
+Desafio 2 - Crie uma função chamada validarNumeroInteiroPositivo que recebe um número como parâmetro e retorna verdadeiro se o número for um inteiro positivo e falso caso contrário. Utilize uma validação nativa para realizar essa verificação.
+
+Desafio 3 - Crie uma função chamada validarSenhaForte que recebe uma senha como parâmetro e retorna verdadeiro se a senha atender aos critérios de uma senha forte e falso caso contrário. Os critérios para uma senha forte incluem pelo menos oito caracteres, pelo menos uma letra maiúscula, uma letra minúscula e um caractere especial. Utilize validações nativas para realizar essas verificações.

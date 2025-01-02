@@ -1,0 +1,10 @@
+Escreva um programa que leia 3 números inteiros e imprima na tela os valores em ordem decrescente.
+
+Lógica do programa:
+
+1 - criar um array de 3 valores inteiros que serão colocados pelo input;
+2 - criar um foreach para iterar os valores;
+3 - colocar meu array em ordem crescente com "Sort()";
+4 - inverter a ordem dos valores com o "Reverse()";
+
+Array.Sort e Array.Reverse não retornam valores, mas eles modificam o próprio array passado como argumento.

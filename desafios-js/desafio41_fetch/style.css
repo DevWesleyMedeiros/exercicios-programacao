@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+html, body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+div.informacoes_imagem{
+    width: 100%;
+    max-width: 700px;
+    height: 100%;
+    max-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: left;
+    padding: 0 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: left;
+}
+div.foto_dia{
+    max-width: 700px;
+    width: 100%;
+    max-height: 100vh;
+    height: 100%;
+    margin: 0 0.5rem;
+}
+h1{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+h2{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.foto{
+    width: 100%;
+    height: 100%;
+}

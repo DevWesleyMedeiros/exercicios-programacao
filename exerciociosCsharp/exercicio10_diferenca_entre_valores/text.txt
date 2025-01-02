@@ -1,0 +1,7 @@
+Escreva um programa que leia dois números e apresente a diferença do maior para o menor.
+
+ler dois valores
+Criar o método;
+    fazer a lógica da diferença entre eles
+
+    

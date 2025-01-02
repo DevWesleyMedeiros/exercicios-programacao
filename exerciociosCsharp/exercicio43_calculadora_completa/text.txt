@@ -1,0 +1,19 @@
+Faça um programa de conversão de base numérica. O programa deverá apresentar uma tela de entrada com as
+seguintes opções:
+A partir da opção escolhida, o programa deverá solicitar para que o usuário digite dois números. Em seguida, o
+programa deve exibir o resultado da opção indicada pelo usuário e perguntar ao usuário se ele deseja voltar ao
+menu principal. Caso a resposta seja ´S´ ou ´s´, deverá voltar ao menu, caso contrário deverá encerrar o
+programa.
+1 – Adição
+2 – Subtração
+3 – Multiplicação
+4 – Divisão
+
+método ToString - é usado para fazer uma representação em string de um objeto.
+O método ToString tem a seguinte assinatura padrão na classe Object:
+
+public virtual string ToString();
+
+Isso significa que o método ToString retorna uma representação de string do objeto atual. Esse método é frequentemente usado para converter um objeto em uma forma legível por humanos, e muitas classes, como int, double, DateTime, e outras, têm suas próprias implementações específicas desse método.
+
+É importante observar que o método ToString é declarado como virtual, o que significa que as classes derivadas podem substituir (override) esse método para fornecer uma implementação personalizada.

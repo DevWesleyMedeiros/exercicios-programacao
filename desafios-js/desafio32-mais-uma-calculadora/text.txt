@@ -1,0 +1,3 @@
+MÉTODO TOOGLE:
+Coloca uma classe em um elemento, caso ele não exista
+Retira uma classe de um elemento, se ele já exite

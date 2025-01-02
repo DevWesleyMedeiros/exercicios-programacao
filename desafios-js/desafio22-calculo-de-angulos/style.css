@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    overflow-y: hidden;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 300px;
+    margin-top: 0%;
+    margin-left: 35%;
+    border: 1px solid black;
+}
+input {
+    margin: 10px 0;
+    padding: 5px 5px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+button {
+    margin: 10px 0;
+    padding: 5px 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: grab;
+}
+button:hover {
+    background-color: rgb(180, 174, 174);
+}
+h1 {
+    margin: 10px 0;
+    padding: 5px 5px;
+    text-align: center;
+}

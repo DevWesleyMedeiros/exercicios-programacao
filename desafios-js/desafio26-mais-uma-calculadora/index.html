@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="valor">
+        <label>Valor 1</label>
+        <input type="text" value="0" name="valor1" id="valor1">
+    </div>
+    <div class="valor">
+        <label>Valor 2</label>
+        <input type="text" value="0" name="valor2" id="valor2">
+    </div>
+    <div class="valor">
+        <label>Resultado</label>
+        <input type="text" value="0" name="res" id="res" readonly style="cursor: not-allowed;">
+        <!--
+            No HTML, o atributo readonly é usado para indicar que um elemento de entrada (como um campo de texto <input>) é somente leitura, ou seja, o usuário pode visualizar o valor no campo, mas não pode editar ou modificar esse valor. Isso é útil quando você deseja exibir informações que não devem ser alteradas pelo usuário, como informações de um formulário que são apenas para leitura.
+            Aqui está um exemplo de como usar o atributo readonly em um elemento <input>:
+            html
+        -->
+        <input type="text" value="Este campo é somente leitura" readonly>
+    </div>
+    <div class="operacoes">
+        <button id="btn_soma">+</button>
+        <button id="btn_subtracao">-</button>
+        <button id="btn_multiplicacao">X</button>
+        <button id="btn_divisao">/</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

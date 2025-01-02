@@ -1,0 +1,13 @@
+CONVERSOR DE DOLAR PARA REAL:
+
+Valor da cotação do dolar em 03/11/2023: R$4,90
+
+Calculo para conversão:
+Qtde dolares x cotação = valor em reais
+
+LÓGICA DO PROGRAMA:
+
+1 - pegar os valores de cotação;
+2 - pegar a quantidade de dolares a ser comparada com reais;
+3 - fazer o Calculo;
+4 - Mostrar o resultado formatado com o cifrão em reias e também em dolares;

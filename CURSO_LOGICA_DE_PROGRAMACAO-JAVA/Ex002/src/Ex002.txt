@@ -1,0 +1,1 @@
+Crie um somatório de 5 número aleatórios escolhidos pelo usuário

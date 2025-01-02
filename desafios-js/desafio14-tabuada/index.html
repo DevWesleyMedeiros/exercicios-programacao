@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>
+            TABUADA!!
+        </h1>
+    </header>
+    <main>
+        <section>
+            <div>
+                <form id="formTabuada" autocomplete="off">
+                    <fieldset>
+                        <legend>VAMOS APRENDER A TABUADA?</legend>
+                        <label for="inumero">NÚMERO:</label>
+                        <input type="number" name="numero" id="inumero" placeholder="Digite um número">
+                        <p>
+                            <input type="reset" value="Limpar" id="limpar" onclick="apagar_conteudo()">
+                            <input type="button" value="Verificar" onclick="clicado()">
+                        </p>
+                    </fieldset>
+                </form>
+            </div>
+            <fieldset style="margin: 0px 25px;">
+                <div id="resultado">
+                    <p style="text-align: center;">Aguardando dados...</p>
+                </div>
+            </fieldset>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

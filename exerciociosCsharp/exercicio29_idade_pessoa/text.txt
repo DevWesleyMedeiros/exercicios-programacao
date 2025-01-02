@@ -1,0 +1,7 @@
+Faça um algoritmo que leia a idade de uma pessoa expressa em anos, meses e dias e escreva a idade dessa
+pessoa expressa apenas em dias. Considerar ano com 365 dias e mês com 30 dias.
+
+1 mês -- 30 dias
+12 meses -- 365 dias
+
+Meu caso: 25 anos => (25 * 365)  

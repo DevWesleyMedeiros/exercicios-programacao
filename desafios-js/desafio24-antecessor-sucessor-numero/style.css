@@ -1,0 +1,20 @@
+* {
+    margin-top: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+    height: 20vh;
+    margin: 4px auto;
+    padding: 15px;
+    border: 1px solid black;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+}
+

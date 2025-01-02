@@ -1,0 +1,21 @@
+CALCULAR O ESTOQUE MÉDIO DE UM ESTOQUE:
+
+O cálculo do estoque médio é uma prática comum nas empresas para gerenciar seus estoques de mercadorias. Ele é útil para avaliar o nível médio de estoque mantido ao longo de um determinado período de tempo e pode ser usado para tomar decisões de compra, planejamento de produção, otimização de estoque e cálculo de custos.
+
+O estoque médio é calculado da seguinte forma:
+
+Estoque Médio = (Estoque Inicial + Estoque Final) / 2
+
+Aqui está uma explicação mais detalhada de como isso é usado e como fazer o cálculo:
+
+    Coleta de dados: Para calcular o estoque médio, você precisará das informações sobre o estoque inicial, estoque final e o período de tempo que deseja analisar. Essas informações podem ser obtidas a partir dos registros de estoque da empresa, como registros de inventário ou sistemas de gestão de estoque.
+
+    Definir o período de tempo: Determine o período de tempo para o qual deseja calcular o estoque médio. Pode ser mensal, trimestral, anual ou qualquer outro período relevante para a sua empresa.
+
+    Calcule o estoque inicial e o estoque final: O estoque inicial é o valor do estoque no início do período, e o estoque final é o valor do estoque no final do período.
+
+    Aplique a fórmula: Use a fórmula mencionada anteriormente para calcular o estoque médio. Some o estoque inicial ao estoque final e divida por 2.
+
+    Interprete os resultados: O valor obtido é o estoque médio durante o período analisado. Ele é útil para entender quanto estoque é mantido em média ao longo do tempo e pode ser usado para tomar decisões de compra, ajustar políticas de estoque, calcular custos de armazenamento e identificar tendências sazonais ou flutuações na demanda.
+
+O estoque médio é importante para evitar a falta de produtos (estoque insuficiente) e o excesso de estoque (estoque em excesso), o que pode resultar em custos desnecessários. Com base no estoque médio, as empresas podem ajustar suas estratégias de estoque, melhorar o planejamento de produção e assegurar que tenham o nível certo de mercadorias disponíveis para atender à demanda de seus clientes.

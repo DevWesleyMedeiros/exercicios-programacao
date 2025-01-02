@@ -1,0 +1,31 @@
+Tudo que eu quiser zerar em JavaScript, eu colocarei em primeira linha
+Tudo que eu quiser colocar valores textuais vazios, eu coloco com ""
+
+
+User
+O que o método "filter" faz?
+	O método filter é uma função de array em JavaScript que cria um novo array com todos os elementos que passam por um teste implementado pela função fornecida. Em outras palavras, ele filtra os elementos de um array com base em uma condição especificada e retorna um novo array contendo apenas os elementos que atendem a essa condição.
+
+O que eu passo para ele como argumento?
+	Aqui está a assinatura básica do método filter:
+
+	array.filter(callback(element[, index[, array]])[, thisArg])
+
+    callback: Função que é chamada para cada elemento do array. Essa função recebe até três argumentos:
+        element: O elemento atual sendo processado no array.
+        index (opcional): O índice do elemento atual no array.
+        array (opcional): O array original ao qual o elemento pertence.
+
+    thisArg (opcional): Um valor a ser usado como this quando executar a função de callback.
+
+O que ele me retorna?
+	O método filter me retorna um novo array contendo apenas os elementos para os quais a função de callback retorna true. Em outras palavras, ele filtra o array com base na condição definida na função de callback.
+
+No caso do código em diante, eu estou filtrando um novo array contendo todos os elementos, menos o array que eu passar
+
+"DATA- seguida de um nome" personalizar atributos em HTML.
+DATASET acessa tal atributo
+
+let quemRemover = evento.target.parentNode.dataset.nome
+"TARGET" captar se o elemento que eu quero esta sendo captado
+Na linha acima eu capturo o evento de clique no elemento alvo, pegando o elemento pai através do atributo personalizado

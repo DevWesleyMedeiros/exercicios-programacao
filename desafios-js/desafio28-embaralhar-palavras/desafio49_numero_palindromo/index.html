@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio número palindromo</title>
+</head>
+<body>
+    <script>
+        console.log(isPalindrome(-11));
+
+        // function isPalindrome(value){
+        //     let valueToString = new String(value);
+        //     let numberNoSpace = valueToString.replace(/\s/g, "");
+        //     let valueSplit = numberNoSpace.split('');
+        //     let valueSplitReverse = valueSplit.reverse();
+        //     let joinNumber = valueSplitReverse.join('');
+        //     if (numberNoSpace === joinNumber) {
+        //         return `Value ${value} is PALINDROME`;
+        //     }else{
+        //         return `Value ${value} isn't PALINDROME`;
+        //     }  
+        // }
+
+        // Versão simplificada
+        function isPalindrome(value){
+            value = Math.abs(value);
+            let valueToString = value.toString();
+            let reverseValue = valueToString.split().reverse().join('');
+            if (valueToString === reverseValue) {
+                return `Value ${value} is PALINDROME`;
+            }else{
+                return `Value ${value} isn't PALINDROME`;
+            }  
+        }
+    </script>
+</body>
+</html>

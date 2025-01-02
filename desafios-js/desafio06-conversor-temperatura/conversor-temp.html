@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 6</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right,  #a2de48,  #6eae43, #687b55);
+            background-attachment: fixed;
+        }
+        input {
+            display: inline;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            font-size: larger;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            background-color: rgb(127, 247, 7);
+            color: rgb(242, 8, 8);
+            box-shadow: 10px;
+        }
+        abbr {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Conversor de medidas
+    </h1>
+    <br>
+    <abbr title="Clique para converter graus Celsius em Kelvin e Fahrenheit"><input type="button" value="Convertor" name="temp" id="temp" onclick="clicar()"></abbr>
+    <br>
+    <p>Clique no botão acima para iniciar</p>
+    <div id="resultado"></div>
+    <script>
+         var interacao = window.document.getElementById('temp')
+         interacao.addEventListener('mouseenter', entrar )
+         interacao.addEventListener('mouseleave', sair)
+
+
+        function clicar() {
+            var GrausCelsius = Number(window.prompt('Digite um número em graus Celsius: '))
+            var Kelvin = GrausCelsius + 273
+            var Fahrenheit = (GrausCelsius * 1.8) + 32
+            var acao = window.document.querySelector('div#resultado')
+            resultado.innerHTML = `<h1> A temperatura de ${GrausCelsius}ºC, correponde a ... </h1>`
+            resultado.innerHTML += `<p> ${Kelvin}ºK, Kelvin </p>`
+            resultado.innerHTML += `<p> ${Fahrenheit}ºF Fahrenheit </p>`
+        }
+        function entrar() {
+            interacao.innerText = 'Clique para pedir um número'
+            interacao.style.backgroundColor = 'skyblue'
+            interacao.style.textDecoration = 'underline'
+            interacao.style.transitionDuration = '0.5em'
+        }
+        function sair() {
+            interacao.innerText = 'Convertor'
+            interacao.style.backgroundColor = 'rgb(127, 247, 7)'
+            interacao.style.textDecoration = 'none'
+            interacao.style.transitionDuration = '0.5em'
+        }
+    </script>
+</body>
+</html>

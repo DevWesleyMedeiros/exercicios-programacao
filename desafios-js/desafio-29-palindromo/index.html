@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frase palindroma</title>
+</head>
+<body>
+    <script>
+        function frasePalindroma(texto){
+            let fraseSemEspaco = texto.replace(/\s/g, "") // elimino os espaço da frase
+            let frase = fraseSemEspaco.split('') // array de letras 
+            let caracteresInvertidos = frase.reverse() // inverto a leitura da frase
+            let juntarCaracteresInvertidos = frase.join('') // junto todas as letras
+            if(fraseSemEspaco === juntarCaracteresInvertidos){  // validação palindroma
+                return `A frase ${texto} é PALINDROMA!!`
+            }else{
+                return `A frase ${texto} NÃO é PALINDROMA!!`
+            }
+        }
+        const frase = "A sacada da casa"
+        console.log(frasePalindroma(frase))
+    </script>
+</body>
+</html>

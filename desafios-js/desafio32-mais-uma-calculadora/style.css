@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: large;
+}
+.calc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: absolute;
+    left: -230px;
+    transition: all 1.5s;
+    transition-timing-function: ease-in-out;
+}
+/*Classe que será atribuída via JavaScript*/
+.calc_exibir{
+    left: 0px !important;
+    transition: all 1.5s;
+    transform: rotate(360deg);
+    transition-timing-function: ease-in-out;
+}
+.calc_principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #eee;
+    border: 3px solid #bbb;
+    width: 230px;
+    border-radius: 5px;
+}
+.teclaOp{
+    background-color: #f44 !important;
+    border-color: #800 !important;
+}
+.teclaOp:hover{
+    background-color: rgb(231, 18, 18) !important;
+    border-color: rgb(115, 7, 7) !important;
+}
+.div_nome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+}
+.display{
+    width: 220px;
+    background-color: #8a8;
+    text-align: right;
+    padding: 5px;
+    font-family: monospace;
+    font-size: larger;
+}
+div.display{
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calc_aba{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 50px;
+    background-color: rgba(128, 128, 128, 0.2);
+    border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
+}
+.div_teclas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    flex-wrap: wrap;
+}
+div.div_teclas > button.num{
+    background-color: #878686;
+}
+.tecla{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: #aaa;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 2px;
+    cursor: pointer;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando Valores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="inputs">
+            <input type="number" id="first-number">
+            <label for="first-number"></label>
+            <input type="number" id="second-number">
+        </div>
+        <div class="titulo">
+            <h1>Fazer o que com os números?</h1>
+        </div>
+        <div class="buttons">
+            <input type="radio" class="opcao" id="somar" value="operacao1" checked name="operacao
+            "><span>SOMAR</span><br>
+            <input type="radio" class="opcao" id="subtrair" value="operacao2" name="operacao
+            "><span>SUBTRAIR</span><br>
+            <input type="radio" class="opcao" id="multiplicar" value="operacao3" name="operacao
+            "><span>MULTIPLICAR</span><br>
+            <input type="radio" class="opcao" id="dividir" value="operacao4" name="operacao
+            "><span>DIVIDIR</span><br>
+        </div>
+        <div class="submit">
+            <button id="calcular">Enviar</button>
+        </div>
+        <div id="resultado">
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

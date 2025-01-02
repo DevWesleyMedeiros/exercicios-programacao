@@ -1,0 +1,3 @@
+Dada uma seqüência de n números (vetor de inteiros), imprimi-la na ordem inversa que foi realizada a leitura.
+
+1 - Criar um loop while que leia uma quantidade indefinidade de valores

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Integrando gráficos com API</title>
+</head>
+<body>
+    <div class="canvas">
+        <canvas id="grafico"></canvas>
+    </div>
+    <script>
+        const meuGrafico = document.getElementById('grafico');
+        let labelX = ["Disponibilidade", "Qualidade", "Performace"];
+        let valores = [0, 0, 0];
+
+        let grafico1 = new Chart(meuGrafico, {
+          type: 'bar',
+          data: {
+            labels: labelX,
+            datasets: [{
+              label: 'Gráfico para produtos',
+              data: valores,
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+        const obterDados = () =>{
+            let endingPoint = "https://api-teste.ferreiramachado.repl.co/";
+            fetch(endingPoint)
+            .then(res => res.json())
+            .then(res =>{
+                valores[0] = res.disponibilidade;
+                valores[1] = res.qualidade;
+                valores[2] = res.performace;
+                grafico1.update();
+            })
+            .catch(erro =>{
+                console.error("ERRO: " + erro);
+            });
+        };
+        let intervalo = setInterval(obterDados, 2000);
+
+        // .then(res => res.json()) - usa-se este formato, já que minha APIn já esta com os valores em formato Json
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+Crie um array char como todas letras do seu nome e retorne todas elas na horizontal, ou seja, letras lado a lado

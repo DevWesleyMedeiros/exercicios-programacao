@@ -1,0 +1,13 @@
+Leia 2 vetores de inteiros V1 e V2 de N componentes cada (no máximo 50). Determine e imprima quantas vezes
+que V1 e V2 possuem valores idênticos nas mesmas posições.
+
+
+MÉTODOS E BIBLIOTECAS USADAS NO CÓDIGO:
+
+O Intersect - Vai retornar um array que contém os valores iguais entre um ou mais arrays. Pertence também ao mesmo nameSpace das demais funcionalidades abaixo, "using System.Linq"
+
+O LINQ é uma tecnologia que oferece uma maneira consistente de consultar dados em diversas fontes usando uma sintaxe semelhante à SQL. No código fornecido, var mesmoValor = valoresV1.Intersect(valoresV2); usa o LINQ para encontrar a interseção (valores comuns) entre os arrays valoresV1 e valoresV2.
+
+O método Any() é um método LINQ - Language interface query que verifica se há algum elemento em uma sequência. Retorna true se houver pelo menos um elemento na sequência, caso contrário, retorna false. No código fornecido, if (mesmoValor.Any()) verifica se há valores comuns entre valoresV1 e valoresV2.
+
+O método IndexOf() é um método que pertence à classe Array e é usado para encontrar o índice de um elemento em uma matriz. Retorna o índice da primeira ocorrência do elemento especificado na matriz ou -1 se o elemento não for encontrado. No código fornecido, Array.IndexOf(valoresV1, n) e Array.IndexOf(valoresV2, n) são usados para encontrar as posições dos valores comuns nos arrays valoresV1 e valoresV2, respectivamente.

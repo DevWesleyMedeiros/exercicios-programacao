@@ -1,0 +1,11 @@
+Escreva um programa que leia um número inteiro e exiba o seu módulo.
+
+O módulo de um número, também conhecido como valor absoluto, é a distância desse número até zero na reta numérica, sem levar em consideração a direção. Para calcular o módulo de -9, você simplesmente remove o sinal negativo e fica com o valor positivo. Portanto, o módulo de -9 é 9.
+x se x é maior ou igual a zero
+x * (-1) se x é menor que zero
+
+Matematicamente, você pode representar isso da seguinte forma:
+
+|módulo de -9| = 9
+
+Basicamente, você ignora o sinal negativo e considera apenas o valor numérico positivo.

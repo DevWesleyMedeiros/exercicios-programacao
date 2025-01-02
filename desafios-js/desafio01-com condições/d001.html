@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio das nacionalidades</title>
+</head>
+<body>
+    <h1>Desafios de nacionalidades</h1>
+    Em que país você nasceu: <input type="text" name="text1" id="txt1">
+    <input type="button" value="varificar" onclick="clicar()">
+    <div id="resposta">
+
+    </div>
+    </div> 
+    <script>
+
+        function clicar() {
+            var text2 = window.document.querySelector('input#txt1').value
+            var resposta = window.document.querySelector('div#resposta')
+            resposta.innerHTML = `<p>Você é do(a) <strong>${text2}</strong></p>`
+            if (text2 == 'Brasil' || text2 == 'brasil') {
+                resposta.innerHTML += `<p>Você é <strong>Brasileiro</strong></p>`
+            } else {
+                resposta.innerHTML += `<p><strong>Você é estrangeiro</strong></p>`   
+            }
+        }
+    </script>
+</body>
+</html>

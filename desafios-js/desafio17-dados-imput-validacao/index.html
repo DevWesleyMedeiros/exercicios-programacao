@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <script>
+            var dataAtual = new Date();
+            var anoAtual = dataAtual.getFullYear();
+            var anoNascimento = window.prompt('Digite seu ano de nascimento: ');
+            while (anoNascimento >= anoAtual) {
+                anoNascimento = window.prompt('ANO DE NASCIMENTO INVÁLIDO!! Digite seu ano de nascimento correto:');
+            }
+            var idade = anoAtual - anoNascimento
+            alert('A idade atual é de ' + idade + ' anos')
+        </script>
+    </body>
+</html>

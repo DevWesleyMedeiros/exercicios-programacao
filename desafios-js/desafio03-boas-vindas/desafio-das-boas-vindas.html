@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio das boas-vindas</title>
+    <style>
+        input {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+            font-weight: bolder;
+            font-style: normal;
+            color: black;
+            display: block;
+            justify-content: space-between;
+            border: solid;
+            width: 150px;
+            height: 150px;
+            box-shadow: rgba(0, 0, 0, 0.295)
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio das Boas-vindas</h1>
+    <input type="button" value="Inicie o desafio" name="botaoDesafio" id="botaoDesafio" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+<div id="resposta"></div>
+<script>
+    function sair() {
+        var leave = window.document.querySelector('#botaoDesafio')
+        leave.innerHTML = 'Inicie o desafio'
+        leave.style.backgroundColor = 'transparent'
+    }
+    function entrar() {
+        var iteracao = window.document.querySelector('#botaoDesafio');
+        iteracao.innerHTML = 'Clique'
+        iteracao.style.backgroundColor = 'skyblue'
+    }
+    function clicar() {
+        var resposta = window.document.querySelector('div#resposta');
+        var nome = window.prompt('Qual é o seu nome?');
+        var idade = window.prompt('Qual é a sua idade?');
+        resposta.innerHTML = `${nome} e ${idade}`
+        window.alert('Eu estou muito feliz de conhecer o(a) ' + nome + ' de ' + idade + ' anos ');
+    }
+</script>
+</body>
+</html>

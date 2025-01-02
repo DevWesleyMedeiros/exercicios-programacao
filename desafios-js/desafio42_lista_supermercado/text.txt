@@ -1,0 +1,33 @@
+Explicação sobre o método splice():
+
+O que a função faz?
+    O método splice() em JavaScript é usado para modificar o conteúdo de um array, removendo ou substituindo elementos existentes e/ou adicionando novos elementos ao array.
+
+Como a função é usada?
+    A sintaxe geral é: array.splice(start, deleteCount, item1, item2, ...).
+        start: Índice no qual iniciar a alteração no array.
+        deleteCount: Número de elementos a serem removidos a partir do índice start.
+        item1, item2, ...: Elementos a serem adicionados ao array a partir do índice start.
+
+O que a função recebe como argumento?
+    splice() recebe vários argumentos:
+        start: Índice de início para modificação.
+        deleteCount: Número de elementos a serem removidos.
+        item1, item2, ...: Elementos a serem adicionados.
+
+O que a função retorna depois de colocarmos os parâmetros?
+    O método splice() retorna um array contendo os elementos removidos. Se nenhum elemento for removido, retorna um array vazio.
+
+Quando devo usar tal método ou propriedade?
+    Use splice() quando precisar adicionar, remover ou substituir elementos em um array. Isso é útil em situações em que você precisa manipular dinamicamente o conteúdo de um array. Por exemplo, ao implementar funcionalidades de edição em uma lista de itens.
+
+Exemplo de uso:
+let myArray = [1, 2, 3, 4, 5];
+
+// Remove 2 elementos a partir do índice 1 e adiciona os elementos 6 e 7
+let removedElements = myArray.splice(1, 2, 6, 7);
+
+console.log(myArray);         // Output: [1, 6, 7, 4, 5]
+console.log(removedElements); // Output: [2, 3]
+
+Neste exemplo, splice() removeu os elementos com índices 1 e 2 de myArray e substituiu-os por 6 e 7, enquanto também retornava os elementos removidos em removedElements.

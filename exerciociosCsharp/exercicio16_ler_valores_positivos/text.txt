@@ -1,0 +1,12 @@
+Considere um vetor de 10 números inteiros positivos maiores que zero e um único número inteiro, também positivo
+e maior que zero. Faça um programa para:
+a. ler pelo teclado o vetor;
+b. ler pelo teclado o número X;
+c. dizer quantos números no vetor são maiores que X, menores que X e iguais a X.
+
+Lógica do programa:
+1 - ler 10 valores inteiros pelo entrada do usuário e armazenar no array
+2 - ler um valor qualquer x também dado pelo usuário que será comparado com os demais valores do array
+3 - dizer quantos números no vetor são maiores que X
+4 - menores que X
+5 - iguais a X

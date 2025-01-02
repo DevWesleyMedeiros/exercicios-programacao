@@ -1,0 +1,81 @@
+Fazer um programa que leia uma frase de até 50 caracteres e imprima a frase sem os espaços em branco.
+Imprimir também a quantidade de espaços em branco da frase.
+
+
+Sim, em C#, a string é uma sequência de caracteres e pode ser considerada como um array de caracteres. Portanto, você pode acessar caracteres individuais, percorrer a string como um array e usar métodos específicos para manipulá-la. Aqui estão alguns métodos e propriedades comuns para manipular strings em C#:
+
+    Length: Retorna o número de caracteres na string.
+string myString = "Hello, World!";
+int length = myString.Length; // Retorna 13
+
+charAt(index): Obtém o caractere na posição especificada.
+
+char charAtIndex = myString[7]; // Retorna 'W'
+
+Substring(startIndex, length): Retorna uma parte da string com base no índice inicial e no comprimento.
+
+string substring = myString.Substring(7, 5); // Retorna "World"
+
+IndexOf(substring): Retorna o índice da primeira ocorrência da substring especificada na string.
+
+int indexOfWorld = myString.IndexOf("World"); // Retorna 7
+
+ToUpper() e ToLower(): Converte a string para maiúsculas ou minúsculas.
+
+string upperCase = myString.ToUpper(); // Retorna "HELLO, WORLD!"
+string lowerCase = myString.ToLower(); // Retorna "hello, world!"
+
+Replace(oldValue, newValue): Substitui todas as ocorrências de um caractere ou substring por outro.
+
+csharp
+
+string newString = myString.Replace("Hello", "Hi"); // Retorna "Hi, World!"
+
+Split(separator): Divide a string em um array de substrings com base no separador especificado.
+
+string[] words = myString.Split(' '); // Retorna {"Hello,", "World!"}
+
+Trim(): Remove espaços em branco do início e do final da string.
+
+    string spacedString = "   Trim me   ";
+    string trimmedString = spacedString.Trim(); // Retorna "Trim me"
+
+Lembre-se de que strings em C# são imutáveis, o que significa que qualquer operação que modifique a string cria uma nova string em vez de modificar a existente. Portanto, ao usar métodos como ToUpper(), ToLower(), Replace(), etc., a string original não é alterada.
+User
+Qual é o erro do código abaixo em C#?
+
+using System;
+
+public static class Ex0057{
+
+    public static string frase;
+    public static void Main(){
+
+        Console.Write("Digite uma frase de menos de 50 caracteres: ");
+        frase = Console.ReadLine().Trim();
+
+        string fraseUsuario;
+
+        if (fraseUsuario.Length > 50 && fraseUsuario.Length == 0)
+        {
+            Console.WriteLine("Não posso analizar a frase dado, pois é muita longa ou sem caracteres");
+        }else{
+            int contEspacosBrancos;
+            for (int i = 0; i < fraseUsuario.Length; i++)
+            {
+                if(fraseUsuario[i] == " "){
+                    contEspacosBrancos++;
+                }
+            }
+            Console.WriteLine("A frase possui {0} espaços em brancos ", contEspacosBrancos);
+
+            var fraseSemEspacos = fraseUsuario.Split(' ');
+            string[] palavras = new string[fraseSemEspacos];
+
+            foreach (string palavra in palavras);
+            {
+                Console.Write(palavra);
+            }
+        } 
+    }
+}

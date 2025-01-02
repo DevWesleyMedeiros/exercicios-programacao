@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio do botões</title>
+    <style>
+        .formatacao {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+            font-weight: bolder;
+            font-style: normal;
+            color: black;
+            display: inline-block;
+            justify-content: space-between;
+            border: solid;
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.295); 
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio das mensagens</h1>
+    <br>
+    <abbr title="Botão 1"><input type="button" value="Botão1" id="comando1" onclick="cliqueBotao1()" class="formatacao"></abbr>
+    <abbr clatitle="Botão 2"><input type="button" value="Botão2" id="comando2" onclick="cliqueBotao2()" class="formatacao"></abbr>
+    <abbr title="Botão 3"><input type="button" value="Botão3" id="comando3" onclick="cliqueBotao3()" class="formatacao"></abbr>
+    <div id="acao1"></div>
+    <div id="acao2"></div>
+    <div id="acao3"></div>
+    <script>
+        function cliqueBotao1() {
+            var b1 = window.document.querySelector('input#comando1').value
+            var resposta1 = window.document.querySelector('div#acao1')
+            resposta1.innerHTML = window.alert('Você clicou no botão 1')
+        }
+        function cliqueBotao2() {
+            var b2 = window.document.querySelector('input#comando2').value
+            var resposta2 = window.document.querySelector('div#acao2')
+            resposta2.innerHTML = window.alert('Você clicou no botão 2')
+        }
+        function cliqueBotao3() {
+            var b3 = window.document.querySelector('input#comando3').value
+            var resposta3 = window.document.querySelector('div#acao3')
+            resposta3.innerHTML = window.alert('Você clicou no botão 3')
+        }
+
+    </script>
+</body>
+</html>

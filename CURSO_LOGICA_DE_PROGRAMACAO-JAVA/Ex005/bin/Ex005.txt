@@ -1,0 +1,45 @@
+Enunciado:
+
+Objetivo: Desenvolver um algoritmo em Java que implemente a busca binária em um array de inteiros ordenado. A busca binária é um método eficiente para encontrar a posição de um determinado valor em um array, reduzindo pela metade o número de elementos a serem verificados em cada iteração.
+
+Instruções:
+
+Crie um método em Java chamado buscaBinaria que receba três parâmetros:
+
+Um array de inteiros ordenado (int[] array).
+Um valor inteiro a ser buscado (int valor).
+Dois inteiros representando os índices inicial e final da busca (int inicio, int fim).
+A função deve seguir os passos do algoritmo de busca binária:
+
+Dividir o array ao meio, calculando o índice do elemento do meio.
+Comparar o valor do elemento do meio com o valor buscado:
+Se o valor do meio for igual ao valor buscado, retornar o índice do elemento.
+Se o valor do meio for maior que o valor buscado, realizar a busca na metade esquerda.
+Se o valor do meio for menor que o valor buscado, realizar a busca na metade direita.
+Continuar o processo até encontrar o valor ou até que os índices inicial e final se cruzem, indicando que o valor não está presente no array.
+A função deve retornar o índice do valor encontrado ou -1 caso o valor não esteja presente no array.
+
+Implemente um programa principal que teste o método buscaBinaria com diferentes arrays e valores.
+
+Regras:
+
+O array fornecido será sempre ordenado.
+O algoritmo deve ser implementado utilizando a abordagem recursiva.
+Exemplo de Entrada:
+
+java
+Copiar código
+int[] array = {1, 3, 5, 7, 9, 11};
+int valor = 7;
+int inicio = 0;
+int fim = array.length - 1;
+Exemplo de Saída:
+
+mathematica
+Copiar código
+O valor 7 foi encontrado no índice 3.
+Caso o valor não esteja presente no array:
+
+Copiar código
+Valor não encontrado.
+Escreva o código necessário para implementar essa busca binária em Java.

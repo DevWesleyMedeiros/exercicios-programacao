@@ -1,0 +1,19 @@
+Desafio 51: Quadrado Mágico
+Desenvolva uma função em JavaScript que recebe uma matriz quadrada de ordem ímpar (3x3, 5x5, etc.) e verifica se ela é um quadrado mágico. Um quadrado mágico é uma matriz onde a soma dos números em cada linha, cada coluna e nas diagonais principais é a mesma. Implemente uma solução eficiente para validar se a matriz é um quadrado mágico.
+
+Exemplo de saída:
+function verificaQuadradoMagico(matriz) {
+    // Sua implementação aqui
+    
+    // Retorna true se a matriz for um quadrado mágico, false caso contrário
+}
+
+// Exemplo de chamada da função
+const matrizQuadrada = [
+    [2, 7, 6],
+    [9, 5, 1],
+    [4, 3, 8]
+];
+
+const resultado = verificaQuadradoMagico(matrizQuadrada);
+console.log(resultado); // Saída esperada: true ou false, dependendo se a matriz é um quadrado mágico ou não

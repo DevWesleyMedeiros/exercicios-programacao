@@ -1,0 +1,48 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+}
+body {
+    background-color: skyblue;
+    padding: 20px 20px; 
+}
+h1 {
+    color: white;
+    text-align: center;
+}
+section {
+    border-radius: 20px;
+    display: block;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    background-color: chartreuse;
+}
+section form {
+    padding: 20px;
+    margin: 10px 10px;
+}
+section input {
+    margin: 3px 5px;
+    padding: 3px;
+}
+div#resultado {
+    text-align: left;
+}
+legend {
+    padding: 5px;
+}
+label {
+    margin: 5px;
+}
+input#inumero {
+    margin-left: -5px;
+}
+fieldset {
+    padding: 10px 10px;
+    border: 1px solid black;
+}
+

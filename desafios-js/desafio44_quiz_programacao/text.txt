@@ -1,0 +1,8 @@
+Ideia do projeto:
+
+Na opção em que eu clicar, se for a correta pele value, então ela será pintado o background de azul, caso contrário, o background será vermelho.
+Ambos os casos, terá um alert avisando se ganhamos ou perdemos
+Ambos os casos, terá a resposta oposta terá também seu valor mostrado
+
+
+

@@ -1,0 +1,67 @@
+Algoritmo de Quicksort
+
+Implemente um algoritmo de ordenação QuickSort em Java. O algoritmo deve ordenar um array de números inteiros em ordem crescente. O método principal do QuickSort deve ser recursivo e utilizar o conceito de partição para dividir o array em sub-arrays menores, que são então ordenados individualmente. A escolha do pivot deve ser a mediana dos elementos do array.
+
+Exemplo de Entrada:
+
+int[] arr = {34, 7, 23, 32, 5, 62};
+Exemplo de Saída:
+int[] sortedArr = {5, 7, 23, 32, 34, 62};
+
+Explicação do Funcionamento:
+O QuickSort é um algoritmo de ordenação eficiente que segue o paradigma "dividir para conquistar". Ele funciona dividindo repetidamente um array em sub-arrays menores até que cada sub-array contenha apenas um elemento, e então os sub-arrays são combinados de forma a obter o array ordenado.
+
+Escolha do Pivot: Um elemento é escolhido como "pivot" (neste caso, a mediana dos elementos). Esse elemento será utilizado para particionar o array.
+
+Particionamento: O array é reorganizado de forma que todos os elementos menores que o pivot fiquem à esquerda dele, e todos os elementos maiores fiquem à direita.
+
+Recursão: O algoritmo é então aplicado recursivamente às partes esquerda e direita do pivot, até que as partições tenham tamanho um ou zero, o que significa que o array está ordenado.
+
+Complexidade: O QuickSort tem uma complexidade média de O(n log n), mas em casos desfavoráveis, a complexidade pode ser O(n²). No entanto, devido ao seu bom desempenho em situações práticas e à sua eficiência em termos de espaço, é um dos algoritmos de ordenação mais utilizados.
+
+
+FUNÇÕES JAVA.LANG USADAS =========================================================
+
+O método stream() é usado quando convertendo listas para arrays com left.stream().mapToInt(i -> i).toArray(); isso transforma a ArrayList em um fluxo de inteiros, e então converte esse fluxo em um array (toArray()).
+
+A função System.arraycopy() é uma função nativa do Java que copia elementos de um array para outro de forma rápida e eficiente. É muito utilizada quando você quer mover elementos entre arrays sem a necessidade de fazer isso manualmente com loops.
+
+public static void arraycopy(Object src, int srcPos, Object dest, int destPos, int length)
+
+Parâmetros;
+Object src: O array de origem de onde os elementos serão copiados.
+int srcPos: A posição inicial no array de origem de onde a cópia vai começar.
+Object dest: O array de destino para onde os elementos serão copiados.
+int destPos: A posição inicial no array de destino para onde os elementos começarão a ser copiados.
+int length: O número de elementos a serem copiados a partir da posição de origem para o destino.
+
+int[] sourceArray = {1, 2, 3, 4, 5};
+int[] destinationArray = new int[5];
+
+// Copiando todos os elementos de sourceArray para destinationArray
+System.arraycopy(sourceArray, 0, destinationArray, 0, sourceArray.length);
+
+// Agora destinationArray contém: {1, 2, 3, 4, 5}
+Explicação Detalhada
+sourceArray: Este é o array de origem de onde queremos copiar os elementos.
+0: Indica a posição inicial em sourceArray de onde a cópia começará.
+destinationArray: Este é o array de destino onde os elementos serão copiados.
+0: Indica a posição inicial em destinationArray onde os elementos copiados serão colocados.
+sourceArray.length: Copia o número total de elementos de sourceArray para destinationArray.
+Uso e Benefícios
+Eficiência: System.arraycopy() é implementado em baixo nível e é mais rápido do que copiar os elementos manualmente usando um loop.
+Versatilidade: Funciona com qualquer tipo de array, sejam eles de tipos primitivos (como int[], char[], etc.) ou objetos (como String[]).
+Segurança: A função realiza verificações para garantir que não ocorra um ArrayIndexOutOfBoundsException, por exemplo, se as posições ou o comprimento forem inválidos para os arrays dados.
+Exemplo mais complexo:
+Suponha que você queira copiar parte de um array para outro, começando de posições específicas em ambos os arrays:
+
+int[] sourceArray = {10, 20, 30, 40, 50};
+int[] destinationArray = new int[5];
+
+Copiando 3 elementos a partir do índice 1 de sourceArray para o índice 2 de destinationArray
+System.arraycopy(sourceArray, 1, destinationArray, 2, 3);
+
+destinationArray agora contém: {0, 0, 20, 30, 40}
+Neste exemplo, os três elementos {20, 30, 40} foram copiados de sourceArray para destinationArray, começando no índice 2 do destino.
+
+A função System.arraycopy() é uma poderosa ferramenta para copiar rapidamente e eficientemente elementos entre arrays em Java. Ela é especialmente útil quando você está lidando com grandes volumes de dados e precisa de um desempenho otimizado.

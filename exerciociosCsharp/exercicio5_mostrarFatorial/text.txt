@@ -1,0 +1,9 @@
+Escreva um programa que leia:
+- a quantidade de números que deverá processar;
+- os números que deverá processar,e calcule e exiba, para cada número a ser processado o seu fatorial.
+Lembrete: O fatorial de um número N é dado pela fórmula: N! = 1 * 2 * 3 * 4 * 5 * ... * N
+
+
+Lógica do programa:
+
+1 - Ler valores para processamento. Input do usuário

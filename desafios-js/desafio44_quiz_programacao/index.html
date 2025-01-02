@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+        }   
+        main{
+            height: 100vh;
+            width: 100vw;
+        }
+        .pergunta{
+            display: block;
+            width: 100%;
+            margin: 1.8rem 0;
+            padding-left: 2rem;
+        }
+        span{
+            font-size: 20px;
+            margin-left: 1rem;
+        }
+        /*Classes que serão inseridas via Js*/
+        .resposta_correta{
+            color: #fff;
+            background-color: blue;
+        }
+        .resposta_errada{
+            color: #fff;
+            background-color: red;
+        }
+        input{
+            margin: 0.5rem 0;
+        }
+    </style>
+    <main>
+        <div class="pergunta">
+            <h1>Qual é a minha linguagem favorita?</h1>
+            <input type="radio" id="js" value="correta" name="resposta"><span class="certa">JavaScript</span><br>
+            <input type="radio" id="cs" value="incorreta" name="resposta"><span class="errada">CSharp</span><br>
+            <input type="radio" id="py" value="incorreta" name="resposta"><span class="errada">Python</span>
+        </div>
+
+        <div class="pergunta">
+            <h1>Qual o melhor site/canal/plataforma de programação?</h1>
+            <input type="radio" id="dco" value="correta" name="resposta"><span class="certa">Danki Code</span><br>
+            <input type="radio" id="cfb" value="incorreta" name="resposta"><span class="errada">CFB Cursos</span><br>
+            <input type="radio" id="w3s" value="incorreta" name="resposta"><span class="errada">W3School</span>
+        </div>
+
+        <div class="pergunta">
+            <h1>Qual é o meu framework favorito?</h1>
+            <input type="radio" id="rct" value="incorreta" name="resposta"><span class="errada">React</span><br>
+            <input type="radio" id="ang" value="incorreta" name="resposta"><span class="errada">Angular</span><br>
+            <input type="radio" id="njs" value="correta" name="resposta"><span class="certa">NodeJS</span>
+        </div>
+    </main>
+    <script>
+        // criando um array com todas as div.pergunta
+        const perguntas = [...document.querySelectorAll('.pergunta')];
+        console.log(perguntas);
+
+        // Para cada uma da pergunta dentro de perguntas, eu vou iterar nos input[type=radio]
+        perguntas.forEach((pergunta, index) => {
+            let inputsRadio = [...pergunta.querySelectorAll('input[type=radio]')];
+            let spans = [...pergunta.querySelectorAll('span')];
+
+            inputsRadio.forEach((input, i) => {
+                input.addEventListener('change', (evt) => {
+                    spans.forEach((span, j) => {
+                        if (i === j) {
+                            span.classList.remove('resposta_errada', 'resposta_correta');
+                            span.classList.add(evt.target.value === 'correta' ? 'resposta_correta' : 'resposta_errada');
+                        }
+                    });
+                    alert(evt.target.value === 'correta' ? 'Resposta Correta' : 'Resposta Errada');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

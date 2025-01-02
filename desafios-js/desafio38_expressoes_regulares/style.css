@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+html, body{
+    height: 100%;
+    position: relative;
+}
+div.form{
+    display: block;
+    margin: 0 auto;
+    padding: 5px 5px;
+    width: 500px;
+    height: 200px;
+    border: 2px solid black;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+input.Email, input.telefone{
+    display: block;
+    width: 100%;
+    height: 30px;
+    padding: 5px 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+input.cor_alerta, p{
+    border: 2px solid red;
+    color: red;
+    /*classe criada e inserida via JavaScript*/
+}
+button.btn_cadastrarEmail{
+    width: 100px;
+    height: 20px;
+    margin: 10px 0;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid black;
+}
+button.btn_cadastarTelefone{
+    width: 120px;
+    height: 20px;
+    margin: 10px 0;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid black;
+}

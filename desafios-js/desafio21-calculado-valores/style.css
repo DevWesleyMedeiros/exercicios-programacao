@@ -1,0 +1,40 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed red;
+    width: auto;
+    height: 50%;
+    margin: 50px;
+}
+.inputs {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+}
+.opcao {
+    margin: 5px;
+}
+.submit button {
+    text-align: initial;
+    margin-top: 10px;
+}
+label {
+    margin: 0px 14px;
+}
+

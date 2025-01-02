@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 005</title>
+    <style>
+        abbr {
+            text-decoration: none;
+        }
+        input {
+            display: inline;
+            background-color: aquamarine;
+            width: 110px;
+            height: 110px;
+            color: black;
+            font-weight: bolder;
+            font-size: larger;
+            text-align: center;
+            border-radius: 100px;
+            border-style: dotted;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #resultado {
+            line-height: 0.5em;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Conversor de medidas</h1>
+    <br>
+    <abbr title="Converte um número para as medidas padrões"><input type="button" value="Conversor" name="convertor" id="convertor" onclick="clicar()"></abbr>
+    <br>
+    <div id="resultado"></div>
+    <br>
+    <p>Clique no botão acima para iniciar</p>
+    <script>
+        function clicar() {
+            var num1 = Number(window.prompt('Digite um valor em [metros]: '))
+            var km = num1 / 1000
+            var hm = num1 / 100
+            var dam = num1 / 10
+            var dm = num1 * 10
+            var cm = num1 * 100
+            var mm = num1 * 1000
+            var acao = window.document.querySelector('div#resultado').value
+             resultado.innerHTML = `<h1> O valor de ${num1} metros corresponde a ...</h1>`
+             resultado.innerHTML += `<p> ${km} em kilometros </p>`
+             resultado.innerHTML += `<p> ${hm} em hectômetros </p>`
+             resultado.innerHTML += `<p> ${dam} em decâmetros </p>`
+             resultado.innerHTML += `<p> ${dm} em decimétros </p>`
+             resultado.innerHTML += `<p> ${cm} em centímetros </p>`
+             resultado.innerHTML += `<p> ${mm} em milímetros </p>`
+        }
+    </script>
+</body>
+</html>

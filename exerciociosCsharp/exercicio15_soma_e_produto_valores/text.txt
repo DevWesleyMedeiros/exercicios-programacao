@@ -1,0 +1,6 @@
+Dados dois vetores x e y, ambos com n elementos, determinar o produto escalar desses vetores. Ou seja, realizar
+a soma de todos dos resultados da multiplicação de x[i] por y[i].
+
+1 - Criar o array X e Y, cada um com 5 valores
+2 - Fazer o produto dos valores do array X, assim como do array Y
+3 - Fazer a soma dos resultados das multiplicações

@@ -1,0 +1,62 @@
+Implementação de uma Fila em Java usando o Conceito de FIFO
+
+Descrição do Problema:
+Neste exercício, você deverá criar uma classe em Java que implemente uma estrutura de dados do tipo fila (queue), utilizando o conceito de FIFO (First-In, First-Out). A fila deverá ser capaz de armazenar e gerenciar elementos do tipo String, permitindo adicionar novos elementos ao final da fila e remover elementos do início.
+
+Requisitos:
+Classe Fila:
+
+Crie uma classe chamada Fila que utilize uma ArrayList<String> para armazenar os elementos.
+A classe deve possuir os seguintes métodos:
+enqueue(String elemento): Adiciona um novo elemento ao final da fila.
+dequeue(): Remove e retorna o elemento no início da fila. Se a fila estiver vazia, deve retornar uma mensagem indicando que a fila está vazia.
+isEmpty(): Retorna true se a fila estiver vazia, e false caso contrário.
+size(): Retorna o número de elementos atualmente na fila.
+peek(): Retorna o elemento no início da fila sem removê-lo. Se a fila estiver vazia, deve retornar uma mensagem indicando que a fila está vazia.
+Classe App:
+
+Crie uma classe chamada App que contenha o método main.
+No método main, crie uma instância da classe Fila e implemente um menu interativo que permita ao usuário:
+Adicionar um novo elemento à fila.
+Remover o próximo elemento da fila.
+Visualizar o próximo elemento da fila (sem removê-lo).
+Verificar se a fila está vazia.
+Verificar o número de elementos na fila.
+Encerrar o programa.
+Funcionamento do Programa:
+
+Ao iniciar, o programa deve exibir um menu com as opções disponíveis.
+O usuário deve ser capaz de interagir com a fila escolhendo opções do menu.
+O programa deve permitir que o usuário continue a interagir com o menu até que ele opte por encerrar o programa.
+Exemplo de Execução:
+markdown
+Copiar código
+==== MENU DA FILA ====
+1. Adicionar elemento à fila
+2. Remover elemento da fila
+3. Visualizar próximo elemento da fila
+4. Verificar se a fila está vazia
+5. Verificar o número de elementos na fila
+0. Encerrar programa
+
+Escolha uma opção: 1
+Digite o elemento: João
+Elemento 'João' adicionado à fila.
+
+Escolha uma opção: 1
+Digite o elemento: Maria
+Elemento 'Maria' adicionado à fila.
+
+Escolha uma opção: 2
+Elemento removido: João
+
+Escolha uma opção: 3
+Próximo elemento na fila: Maria
+
+Escolha uma opção: 0
+Finalizando o programa...
+Dicas:
+Lembre-se de que na fila, o primeiro elemento que entra é o primeiro a sair, seguindo o conceito FIFO.
+Verifique cuidadosamente as condições de fila vazia antes de realizar operações que removam ou visualizem elementos.
+Certifique-se de testar o programa com diferentes cenários para garantir que ele funcione conforme o esperado.
+Objetivo: Com este exercício, você praticará a implementação de estruturas de dados em Java e reforçará o conceito de filas e o paradigma FIFO.

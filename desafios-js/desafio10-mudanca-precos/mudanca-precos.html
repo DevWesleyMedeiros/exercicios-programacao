@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 10</title>
+    <style>
+        body {
+            background-image: linear-gradient(to left, yellow, gold, orange)
+        }
+        input {
+            display: inline-block;
+            width: 120px;
+            height: 50px;
+            font-size: x-large;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            font-style: oblique;
+            text-align: center;
+            border: black;
+            text-shadow: rgba(0, 0, 0, 0.455);
+            background-color: blueviolet;
+            color: rgb(123, 240, 6);
+        }
+        abbr {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Preço mudou</h1>
+    <br>
+    <abbr title="Verifa o preço atual em comparação com o enterior"><input type="button" value="Verificar" name="preco" id="preco" onclick="clicar()" onmouseenter="entrar()" onmouseleave="sair()"></abbr>
+    <br>
+    <p>Clique para começar</p>
+    <div id="resultado"></div>
+    <script>
+        function entrar() {
+            var iteracao = window.document.getElementById('preco')
+            iteracao.style.backgroundColor = 'skyblue'
+            iteracao.style.textDecoration = 'undercore'
+            iteracao.style.color = 'black'
+        }
+        function sair() {
+            var iteracao = window.document.getElementById('preco')
+            iteracao.style.backgroundColor = ' blueviolet'
+        }
+
+        function clicar() {
+            var p_anterior = Number(window.prompt('Qual era o preço anterior do produto? [R$]'))
+            if (typeof p_anterior == 'undefined') {
+                alert('O PROGRAMA FOI CANCELADO')
+                return;
+            }
+            var p_atual = Number(window.prompt('Qual é o preço atual do produto? [R$]'))
+            if (typeof p_atual == 'undefined') {
+                alert('O PROGRAMA FOI CANCELADO')
+                return;
+            }
+            var diferença_menos = p_anterior - p_atual
+            var diferença_mais = p_atual - p_anterior
+            var aumento = (diferença_mais / p_anterior) * 100
+            var desconto = ((p_anterior - p_atual) / p_anterior) * 100
+            var aumento_duas_casas = aumento.toFixed(2)
+            var desconto_duas_casas = desconto.toFixed(2)
+            var intergradora = window.document.querySelector('div#resultado').value
+            resultado.innerHTML = ` <h1> Analisando os dados informados ... </h1>`
+
+            setTimeout(function()  {
+                resultado.innerHTML += `<h2> O produto custava R$${p_anterior} e agora custa RS${p_atual} </h2>`
+                if (p_atual > p_anterior) {
+                resultado.innerHTML += ` <p> O produto está mais caro em R$${diferença_mais}</p> `
+                resultado.innerHTML += `<p> E o percentual corresponde a <strong>${aumento_duas_casas}% de aumento</strong> </p>`
+            } else if (p_atual == p_anterior){
+                resultado.innerHTML += `<p> Os preços continuam os mesmos</p>`
+            } else {
+                resultado.innerHTML += `<p> O Preço atual é menor que o preço anterior em R$${diferença_menos}</p>`
+                resultado.innerHTMl += `<p> E o percentual de desconto é <strong>${desconto_duas_casas}%</strong> <p>`
+            }
+        }, 3000);
+        }
+    </script>
+</body>
+</html>

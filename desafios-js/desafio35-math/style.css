@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: large;
+}
+body, html{
+    height: 100%;
+    position: static;
+}
+div.container_eyes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 10%;
+}
+.big_eyes{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: white;
+    outline: 15px solid black;
+    margin: 20px 20px;
+    position: relative;
+}
+.big_eyes > .inner_black_circle{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    top: 40%;
+    left: 60%;
+}
+
+.inner_black_circle > .short_inner_white_circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    top: 25%;
+    left: 55%;
+}

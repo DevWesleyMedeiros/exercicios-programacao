@@ -1,0 +1,7 @@
+Desafio 50: Sequência de Fibonacci Alternada
+Implemente uma função que recebe um número inteiro positivo 'n' como parâmetro e retorna uma string representando os primeiros 'n' termos da sequência de Fibonacci, onde cada termo é precedido por "+" se for par e "-" se for ímpar. Por exemplo, para n = 5, a saída seria "+0 -1 +1 -2 +3".
+
+
+Sequência de Fibonacci: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144...
+
+2 = 3 -1 or 2 = 1 + 1

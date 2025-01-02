@@ -1,0 +1,38 @@
+LÓGICA DE PROGRAMAÇÃO DO PROGRAMA EMBARALHAR PALAVRA
+    - criar uma função que pegue uma palavra ou texto
+    - Pegar cada letra do meu texto e colocar em array
+    - iterar em cada uma delas
+    - embaralhá-las e mostrar na tela
+/*
+const str = "Olá, Mundo!";
+const arrayDeSubstrings = str.split();
+console.log(arrayDeSubstrings)
+"SPLIT()" - transforma uma palavra em um array de letra
+"JOIN()" - junta as coisas através de um delimitador
+
+*/
+/*
+const string = "Maçã, Banana, Pera";
+const frutas = string.split(", ");
+console.log(frutas); // ["Maçã", "Banana", "Pera"]
+*/
+==========================================================================================
+LINHA POR LINHA DO CÓDIGO:
+    function embaralharPalavra(texto){  
+        // crio uma função que recebe um texto
+            let arrayLetras = texto.split(''); 
+            // Converte a palavra em um array de letras
+            
+            for (let i = arrayLetras.length - 1; i > 0; i--){ 
+                // meu i começa no tamanho da minha palavra ou frase, do último valor em diante. Enquanto o i for maior que 0, ele perde um, ou seja, até o final da minha palavra
+                
+                const letras = Math.floor(Math.random() * (i + 1));  
+                // Troca cada letra com outra letra aleatória
+                
+                [arrayLetras[i], arrayLetras[letras]] = [arrayLetras[letras], arrayLetras[i]];  // Atualizo a cada iteração arrayLetras[i] == primeira posição
+                arrayLetras[letras] == segunda posição
+            }
+            return arrayLetras.join(''); // Junta as letras para formar a palavra embaralhada, nesse caso, o delimitador é espaço
+        }
+        const palavra = "A casa da Maria Joaquina";
+        console.log(embaralharPalavra(palavra))

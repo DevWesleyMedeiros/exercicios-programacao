@@ -1,0 +1,2 @@
+Fazer um programa para ler um vetor de inteiros positivos de 50 posições. Imprimir a quantidade de números
+pares e de múltiplos de 5.

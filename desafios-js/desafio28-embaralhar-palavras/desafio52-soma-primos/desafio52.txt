@@ -1,0 +1,16 @@
+Desafio 52: Soma de Números Primos
+Crie uma função em JavaScript que recebe um número inteiro positivo N como parâmetro e retorna a soma dos primeiros N números primos até o valor dado. Certifique-se de implementar um algoritmo eficiente para verificar se um número é primo.
+
+Exemplo saída:
+function somaDosPrimos(N) {
+    // Sua implementação aqui
+    
+    // Retorna a soma dos primeiros N números primos
+}
+
+// Exemplo de chamada da função
+const resultado = somaDosPrimos(5);
+console.log(resultado); // Saída esperada: A soma dos primeiros 5 números primos
+
+
+Valores primos: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, ...

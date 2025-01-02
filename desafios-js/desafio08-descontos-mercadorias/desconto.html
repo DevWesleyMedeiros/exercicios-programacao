@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 08</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, rgb(114, 114, 230), rgb(108, 185, 215));
+        }
+        input {
+            background-color: rgb(140, 106, 140);
+            color: aliceblue;
+            display: inline;
+            width: 100px;  
+            height: 50px;
+            text-align: center;
+        }
+        abbr {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cauculando desconto</h1>
+    <br>
+    <abbr title="Caucula o desconto do produto"><input type="button" value="Desconto 10%" name="desconto" id="desconto" onclick="clicar()"></abbr>
+    <br>
+    <p>Clique no botão acima para iniciar</p>
+    <div id="resultado"></div>
+    <script>
+        function clicar() {
+            var produto = window.prompt('Qual é o nome do produto? ')
+            var preco = Number(window.prompt('Qual é o preço do produto [R$]: '))
+            var desconto = Number(window.prompt('Qual é o valor do desconto em [%]: '))
+            var cauculo = (1 - (desconto / 100)) * preco
+            var cauculo_duas_casas_decimais = cauculo.toFixed(2)
+            var valor_desconto = preco - cauculo
+            var valor_com_duas_casas = valor_desconto.toFixed(2)
+            var resultado = window.document.querySelector('div#resultado')
+            resultado.innerHTML = `<h1> Cauculando o desconto de ${desconto}% para ${produto} ... </h1>`
+            resultado.innerHTML += `<p> O preço original era ${preco} </p>`
+            resultado.innerHTML += `<p> Você acaba de ganhar R$${valor_com_duas_casas} de desconto </p>`
+            resultado.innerHTML += `<p> No fim, você irá pagar R$${cauculo_duas_casas_decimais} no produto ${produto}</p>`
+        }
+    </script>
+</body>
+</html>

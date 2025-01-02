@@ -1,0 +1,8 @@
+PROGRAMA DETCTOR DE PALINDROMO:
+    Frases palindromas são aqueles que se pode ler a mesma palavra de trás para diante da mesma forma
+
+Passo 1 - Crir uma função que recebe uma palavra.
+Passo 2 - eliminar espaços da palavra.
+Passo 3 - juntar e inverter os caracteres para que possam ser lidos tanto da 
+          esquerda para direita como da direita para esquerda.
+Passo 4 - Fazer a validação que comprovará se a frase em questão é palindroma ou não

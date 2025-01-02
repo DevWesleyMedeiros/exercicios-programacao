@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Embaralhar palavras</title>
+</head>
+<body>
+    <script>
+        function embaralharPalavra(texto){
+            let arrayLetras = texto.split('');
+            for (let i = arrayLetras.length - 1; i > 0; i--){
+                const letras = Math.floor(Math.random() * (i + 1));
+                [arrayLetras[i], arrayLetras[letras]] = [arrayLetras[letras], arrayLetras[i]];
+            }
+            return arrayLetras.join('');
+        }
+        const palavra = "A casa da Maria Joaquina";
+        console.log(embaralharPalavra(palavra));
+        document.write(palavra)
+    </script>
+</body>
+</html>
+
+    
+    

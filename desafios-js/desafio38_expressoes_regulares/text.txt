@@ -1,0 +1,35 @@
+======================================================================
+Expressões regulares:
+Exatamente, você entendeu corretamente. A expressão regular ^[^\s@]+@[^\s@]+\.[^\s@]+$ define uma estrutura específica para um endereço de e-mail. Se a string não seguir exatamente essa estrutura, a expressão regular não fará correspondência e, portanto, ! (o operador de negação) irá transformar o resultado em false.
+
+Se a string seguir a estrutura definida pela expressão regular (ou seja, for um endereço de e-mail válido de acordo com esses critérios), a expressão regular retornará true.
+
+Se a string não seguir a estrutura, a expressão regular retornará false.
+Os critérios estão relacionados à estrutura da expressão. A expressão regular ^[^\s@]+@[^\s@]+\.[^\s@]+$ está definindo uma estrutura específica para um endereço de e-mail. Vamos analisar cada parte:
+
+^[^\s@]+: A string deve começar (^) com um ou mais caracteres que não sejam espaços em branco (\s) nem o caractere "@".
+
+@: Deve haver um caractere "@".
+
+[^\s@]+: Após o "@" deve haver um ou mais caracteres que não sejam espaços em branco (\s) nem o caractere "@".
+
+\.: Deve haver um ponto (.). O ponto é um metacaractere, então é necessário usar a barra invertida (\.) para corresponder literalmente a um ponto.
+
+[^\s@]+$: Após o ponto, a string deve terminar ($) com um ou mais caracteres que não sejam espaços em branco (\s) nem o caractere "@".
+
+Portanto, os critérios são sobre a estrutura do endereço de e-mail, garantindo que ele tenha a forma básica: "algumTexto@algumTexto.algumaCoisa"
+
+Com número:
+Os critérios estão relacionados à estrutura da expressão. A expressão regular ^[^\s@]+@[^\s@]+\.[^\s@]+$ está definindo uma estrutura específica para um endereço de e-mail. Vamos analisar cada parte:
+
+^[^\s@]+: A string deve começar (^) com um ou mais caracteres que não sejam espaços em branco (\s) nem o caractere "@".
+
+@: Deve haver um caractere "@".
+
+[^\s@]+: Após o "@" deve haver um ou mais caracteres que não sejam espaços em branco (\s) nem o caractere "@".
+
+\.: Deve haver um ponto (.). O ponto é um metacaractere, então é necessário usar a barra invertida (\.) para corresponder literalmente a um ponto.
+
+[^\s@]+$: Após o ponto, a string deve terminar ($) com um ou mais caracteres que não sejam espaços em branco (\s) nem o caractere "@".
+
+Portanto, os critérios são sobre a estrutura do endereço de e-mail, garantindo que ele tenha a forma básica de "algumTexto@algumTexto.algumaCoisa", onde "algumTexto" não contém espaços em branco ou o caractere "@" e "algumaCoisa" não contém espaços em branco.

@@ -1,0 +1,9 @@
+Desafio 49: Palíndromo de Números
+Crie uma função em JavaScript que recebe um número inteiro positivo e verifica se ele é um palíndromo. Um palíndromo é um número que permanece o mesmo quando seus dígitos são invertidos. Por exemplo, 121 é um palíndromo, mas 123 não é.
+
+Funções usada:
+
+toString() - vai converter o valor numérico para uma sting do mesmo
+split('') - Divide a string com o parâmetro dado, nesse caso, separar por espaços e ela me retorna um array com os caracteres.
+reverse() - lê uma string de trás para diante
+join('') - junta toda a string pelo parâmetro dado, nesse caso espaços

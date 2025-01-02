@@ -1,0 +1,8 @@
+Calcular 5% de comissão do valor total de uma venda a um vendedor:
+
+Lógica de programa:
+
+1 - Pagar o id e nome de cada um dos vendedores - no total serão 3
+2 - Código da peças vendidas. cada peça terá um código e cada código terá um valor diferente - no total serão 3 peças
+3 - Ter o valor unitario de cada peça
+4 - Quantidade total daquela peça vendidas

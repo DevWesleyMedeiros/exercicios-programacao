@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sequência Fibonacci alternada</title>
+  </head>
+  <body>
+    <script>
+      alternatingFibonacciSequence(100);
+
+      function alternatingFibonacciSequence(value) {
+        let arrayPositive = [];
+        let arrayNegative = [];
+        let valueToStringArray = value.toString().split("");
+        let currentValue = 0;
+        let preValue;
+        let nextValue = 1;
+        while (nextValue <= value) {
+          if (nextValue % 2 === 0) {
+            arrayPositive.push(nextValue);
+          } else {
+            arrayNegative.push(nextValue);
+          }
+          preValue = currentValue1;
+          currentValue = nextValue;
+          nextValue = preValue + currentValue;
+        }
+        for (
+          let i = 0;
+          i < Math.max(arrayPositive.length, arrayNegative.length);
+          i++
+        ) {
+          if (i < arrayPositive.length) {
+            console.log("+" + arrayPositive[i]);
+          }
+          if (i < arrayNegative.length) {
+            console.log("-" + arrayNegative[i]);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

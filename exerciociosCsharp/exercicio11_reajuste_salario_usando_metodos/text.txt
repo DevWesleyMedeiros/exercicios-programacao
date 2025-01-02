@@ -1,0 +1,5 @@
+Escreva um programa que calcule e retorne o salário atualizado através do método REAJUSTE. O método deve
+receber o valor do salário e o índice de reajuste.
+
+1 - ler valor do salário e do percentual do reajuste
+2 - criar o método que calcule o reajuste sobre o salário

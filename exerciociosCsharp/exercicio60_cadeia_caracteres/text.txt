@@ -1,0 +1,81 @@
+Escreva um programa que solicite dois caracteres de A a Z ao usuário e imprima o número de caracteres existente
+entre eles. Assuma que o usuário digite os 2 caracteres em ordem alfabética. Caso não o estejam, emitir
+mensagem de erro.
+Exemplo: Digite 2 caracteres: j t O numero de caracteres entre eles é: 9
+
+=======================================================================
+
+Explicação do código:
+
+    new string(letter): Isso cria uma nova instância da classe string a partir de um array de caracteres (letter neste caso). Isso é feito para facilitar a manipulação de strings, já que o método Substring opera em instâncias de string.
+
+    .Substring(fC, sC+1): Este é um método da classe string que retorna uma parte da string original. Os parâmetros fC e sC - fC + 1 especificam os índices inicial e final da substring a ser extraída. Aqui está o que cada parte significa:
+    fC: Índice inicial da substring. No seu código, fC é o índice da primeira letra fornecida pelo usuário no array letter.
+    sC - fC + 1: Comprimento da substring. sC - fC representa a distância entre as duas letras fornecidas pelo usuário, e +1 é adicionado para incluir a última letra na substring.
+
+Então, a linha cria uma nova string a partir do array de letras e extrai uma substring que contém as letras do intervalo fornecido pelos índices fC e sC no array letter. Essa substring é armazenada na variável countLetters. O resultado é uma string que representa as letras entre firstCaracter e secondCaracter no alfabeto.
+
+Eu não poderia fazar a mesma linha dessa maneira: string[] counterLetters = letter.Substring(fC, sC+1);?
+
+Não, a proposta de usar string[] counterLetters = letter.Substring(fC, sC+1); não funcionaria porque letter é um array de caracteres (char[]), e o método Substring pertence à classe string, não a arrays de caracteres.
+
+Para corrigir isso, você pode primeiro converter o array de caracteres para uma string usando new string(letter) e, em seguida, usar o método Substring. Assim, a linha correta seria:
+
+csharp
+
+string countLetters = new string(letter).Substring(fC, sC - fC + 1);
+
+Essa abordagem cria uma instância de string a partir do array de caracteres (new string(letter)) e, em seguida, usa o método Substring para extrair a parte desejada da string. Isso permite que você trabalhe com substrings de uma maneira mais eficiente do que se estivesse lidando diretamente com arrays de caracteres.
+
+=======================================================================
+
+Outra proposta de código:
+
+E se eu musasse para string no lugar de char, no array de caracteres. Eu poderia usar a proposta mencionada?
+
+Sim. Se você alterar o tipo do array de caracteres de char[] para string[], você pode usar a proposta mencionada acima. No entanto, a mudança deve ser consistente em todo o código para garantir que os tipos estejam corretos. Aqui está como ficaria:
+
+using System;
+
+namespace MainMethod
+{
+    public static class Func
+    {
+        public static int PhraseAnalizer(string firstCaracter, string secondCaracter)
+        {
+            string[] letter = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
+
+            int fC = Array.IndexOf(letter, firstCaracter);
+            int sC = Array.IndexOf(letter, secondCaracter);
+
+            string countLetters = string.Join("", letter).Substring(fC, sC+1);
+
+            return countLetters.Length;
+        }
+    }
+
+    namespace Default
+    {
+        public static class Ex0060
+        {
+            public static string firstCaracter;
+            public static string secondCaracter;
+            public static int result;
+
+            public static void Main()
+            {
+                Console.Write("Type here the first letter from the alphabet you want to verify: ");
+                firstCaracter = Console.ReadLine().ToUpper();
+
+                Console.Write("Type here the second letter from the alphabet you want to verify: ");
+                secondCaracter = Console.ReadLine().ToUpper();
+
+                result = MainMethod.Func.PhraseAnalizer(firstCaracter, secondCaracter);
+
+                Console.WriteLine("There are {0} letters in the alphabet between {1} and {2}", result, firstCaracter, secondCaracter);
+            }
+        }
+    }
+}
+
+Neste exemplo, mudei o tipo do array letter para string[] e os tipos dos parâmetros firstCaracter e secondCaracter para string na função PhraseAnalizer. A linha que usa o método Substring foi ajustada para funcionar com um array de strings.
