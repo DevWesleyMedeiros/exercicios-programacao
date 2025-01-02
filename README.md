@@ -14,7 +14,34 @@ Este repositório contém uma série de exercícios de lógica de programação 
 
 Os arquivos estão organizados de acordo com a linguagem de programação. Cada diretório contém exercícios resolvidos em uma determinada linguagem.
 
-exercicios-logica-programacao/ │ ├── javascript/ │ ├── EX003.js │ ├── EX002.js │ └── ... │ ├── typescript/ │ ├── EX001.ts │ ├── EX002.ts │ └── ... │ ├── python/ │ ├── EX001.py │ ├── EX002.py │ └── ... │ ├── csharp/ │ ├── EX001.cs │ ├── EX002.cs │ └── ... │ ├── java/ │ ├── EX001.java │ ├── EX002.java │ └── ... │ └── README.md
+\`\`\`
+exercicios-logica-programacao/
+│
+├── javascript/           <-- Pasta que contém os exercícios em JavaScript
+│   ├── exercício1.js     <-- Arquivo de exercício 1 em JavaScript
+│   ├── exercício2.js     <-- Arquivo de exercício 2 em JavaScript
+│   └── ...               <-- Outros arquivos de exercício em JavaScript
+│
+├── typescript/           <-- Pasta que contém os exercícios em TypeScript
+│   ├── exercício1.ts     <-- Arquivo de exercício 1 em TypeScript
+│   ├── exercício2.ts     <-- Arquivo de exercício 2 em TypeScript
+│   └── ...               <-- Outros arquivos de exercício em TypeScript
+│
+├── python/               <-- Pasta que contém os exercícios em Python
+│   ├── exercício1.py     <-- Arquivo de exercício 1 em Python
+│   ├── exercício2.py     <-- Arquivo de exercício 2 em Python
+│   └── ...               <-- Outros arquivos de exercício em Python
+│
+├── csharp/               <-- Pasta que contém os exercícios em C#
+│   ├── exercício1.cs     <-- Arquivo de exercício 1 em C#
+│   ├── exercício2.cs     <-- Arquivo de exercício 2 em C#
+│   └── ...               <-- Outros arquivos de exercício em C#
+│
+├── java/                 <-- Pasta que contém os exercícios em Java
+│   ├── exercício1.java   <-- Arquivo de exercício 1 em Java
+│   ├── exercício2.java   <-- Arquivo de exercício 2 em Java
+│   └── ...               <-- Outros arquivos de exercício em Java
+\`\`\`
 
 ## Objetivo
 
@@ -33,12 +60,13 @@ Para executar os exercícios em JavaScript ou TypeScript, siga os passos abaixo:
 
 1. Clone o repositório:
     ```bash
-    git clone https://github.com/seu-usuario/exercicios-logica-programacao.git
+    git clone https://github.com/DevWesleyMedeiros/exercicios-programacao.git
     ```
 
 2. Navegue até a pasta de JavaScript ou TypeScript:
     ```bash
-    cd exercicios-logica-programacao/javascript
+    cd exercicios-programacao/EXERCICIOS.JS
+    cd exercicios-logica-programacao/EXERCICIOS_TS
     ```
 
 3. Execute o exercício:
