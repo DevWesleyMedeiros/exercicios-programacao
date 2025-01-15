@@ -1,4 +1,3 @@
-// Interface defining the structure for a payment
 interface Pagamento {
     nomeDaConta: string;
     valorFaturaOuBoleto: number;
@@ -10,7 +9,6 @@ interface Pagamento {
     calcularValorFatura(): number;
 }
 
-// Base class for Card Payment
 class PagamentoComCartão implements Pagamento {
     nomeDaConta: string;
     valorFaturaOuBoleto: number;
