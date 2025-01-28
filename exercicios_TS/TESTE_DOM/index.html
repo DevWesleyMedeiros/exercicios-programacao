@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Manipulação DOM Typescript</title>
+</head>
+<body>
+
+  <div class="container_math-operation">
+    
+    <!-- Operação de soma -->
+    <div class="operation container_sum">
+      <div class="operation-header">
+        <span>Somar</span>
+      </div>
+      <div class="container_numbers_sum">
+        <input type="number" class="input-sum" placeholder="Somador" required>
+        <input type="number" class="input-sum" placeholder="Somado" required>
+      </div>
+      <button class="calc-button" id="sum">Calcular</button>
+    </div>
+
+    <!-- Operação de subtração -->
+    <div class="operation container_subtract">
+      <div class="operation-header">
+        <span>Subtrair</span>
+      </div>
+      <div class="container_numbers_subtract">
+        <input type="number" class="input-subtration" placeholder="Minuendo" required>
+        <input type="number" class="input-subtration" placeholder="Subtraendo" required>
+      </div>
+      <button class="calc-button" id="subtration">Calcular</button>
+    </div>
+
+    <!-- Operação de divisão -->
+    <div class="operation container_divide">
+      <div class="operation-header">
+        <span>Dividir</span>
+      </div>
+      <div class="container_numbers_divide">
+        <input type="number" class="input-division" placeholder="Dividendo" required>
+        <input type="number" class="input-division" placeholder="Divisor" required>
+      </div>
+      <button class="calc-button" id="divide">Calcular</button>
+    </div>
+
+    <!-- Operação de multiplicação -->
+    <div class="operation container_multiply">
+      <div class="operation-header">
+        <span>Multiplicar</span>
+      </div>
+      <div class="container_numbers_multiply">
+        <input type="number" class="input-multi" placeholder="Valor" required>
+        <input type="number" class="input-multi" placeholder="Multiplicador" required>
+      </div>
+      <button class="calc-button" id="multiplication">Calcular</button>
+    </div>
+
+    <!-- Operação de raiz quadrada -->
+    <div class="operation container_square-root">
+      <div class="operation-header">
+        <span>Raiz Quadrada</span>
+      </div>
+      <div class="container_numbers_square-root">
+        <input type="number" class="input-square" placeholder="Raiz" required>
+        <input type="number" class="input-square" placeholder="index aqui" required>
+      </div>
+      <button class="calc-button" id="square">Calcular</button>
+    </div>
+
+    <!-- Operação de exponenciação -->
+    <div class="operation container_exponentiation">
+      <div class="operation-header">
+        <span>Exponenciação</span>
+      </div>
+      <div class="container_numbers_exponentiation">
+        <input type="number" class="input-exponentiation" placeholder="Base" required>
+        <input type="number" class="input-exponentiation" placeholder="Expoente" required>
+      </div>
+      <button class="calc-button" id="exponentiation">Calcular</button>
+    </div>
+    
+  </div> <!--Fechamento da div container_math-operation -->
+
+  <div class="container-result">
+    <h2 class="result"></h2>
+    <button class="close_result">Fechar</button>
+  </div>
+  
+  <script src="index.js"></script>
+</body>
+</html>

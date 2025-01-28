@@ -1,0 +1,5 @@
+O QUE IREMOS TESTAR NESSE CÓDIGO
+
+1 - Manipulação do DOM com Typescript e tipagem para DOM object
+2 - Orientação a objetos
+3 - Como manipular lista de items cada item por separado
