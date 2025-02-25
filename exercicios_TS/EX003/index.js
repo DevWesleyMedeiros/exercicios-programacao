@@ -43,6 +43,7 @@ var DevFrontend = /** @class */ (function (_super) {
     function DevFrontend(nome, idade, linguagemProgramacao, framework) {
         var _this = _super.call(this, nome, idade, linguagemProgramacao) || this;
         _this.framework = framework;
+        _this.nome = nome;
         return _this;
     }
     DevFrontend.prototype.infoDev = function () {
@@ -64,6 +65,15 @@ var DevBackend = /** @class */ (function (_super) {
     };
     return DevBackend;
 }(Dev));
+var CountryDeveloper = /** @class */ (function () {
+    function CountryDeveloper(countryName) {
+        this.countryName = countryName;
+    }
+    CountryDeveloper.prototype.work = function () {
+        console.log("Estou trabalhando no(s) ".concat(this.countryName));
+    };
+    return CountryDeveloper;
+}());
 var devFrontend = new DevFrontend("Weslei", 26, "JavaScript", "React");
 devFrontend.setProjetos("Projeto Frontend 1");
 console.log(devFrontend.getProjetos());

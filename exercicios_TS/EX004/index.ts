@@ -57,7 +57,7 @@ export namespace HumanBeing {
                     this.school = school;
                     console.log("School name updated successfully.");
 
-                } catch (error) {
+                } catch (error:any) {
                     console.error(error.message);
                 }
             } else {

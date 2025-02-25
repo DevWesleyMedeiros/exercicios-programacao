@@ -1,37 +1,42 @@
-"use strict";
-class Carro {
-    marca;
-    modelo;
-    ano;
-    constructor(marca, modelo, ano) {
+var Carro = /** @class */ (function () {
+    function Carro(marca, modelo, ano) {
         this.marca = marca;
         this.modelo = modelo;
         this.ano = ano;
     }
-    get carInfo() {
-        return [this.marca, this.modelo, this.ano.toString()];
-    }
-    set newCarYear(newYear) {
-        try {
-            // Verificar se o tipo é 'number' e se é um valor inteiro válido
-            if (typeof newYear !== 'number') {
-                throw new Error('O ano deve ser um número.');
+    Object.defineProperty(Carro.prototype, "carInfo", {
+        get: function () {
+            return [this.marca, this.modelo, this.ano.toString()];
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Carro.prototype, "newCarYear", {
+        set: function (newYear) {
+            try {
+                // Verificar se o tipo é 'number' e se é um valor inteiro válido
+                if (typeof newYear !== 'number') {
+                    throw new Error('O ano deve ser um número.');
+                }
+                if (!Number.isInteger(newYear)) {
+                    throw new Error('O ano deve ser um número inteiro.');
+                }
+                if (newYear <= 0) {
+                    throw new Error('O ano não pode ser negativo ou zero.');
+                }
+                this.ano = newYear;
             }
-            if (!Number.isInteger(newYear)) {
-                throw new Error('O ano deve ser um número inteiro.');
+            catch (error) {
+                // Aqui o erro capturado terá mais informações sobre a natureza do erro
+                console.error("Erro ao cadastrar novo ano: ".concat(error.message));
             }
-            if (newYear <= 0) {
-                throw new Error('O ano não pode ser negativo ou zero.');
-            }
-            this.ano = newYear;
-        }
-        catch (error) {
-            // Aqui o erro capturado terá mais informações sobre a natureza do erro
-            console.error(`Erro ao cadastrar novo ano: ${error.message}`);
-        }
-    }
-}
-const golzinho = new Carro("Gol", "G5", 2012);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return Carro;
+}());
+var golzinho = new Carro("Gol", "G5", 2012);
 console.log(golzinho.carInfo);
 console.log("------------------------------------------------------");
 console.log("Alterando o ano do golzinho: ");

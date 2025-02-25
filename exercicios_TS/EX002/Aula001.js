@@ -18,11 +18,15 @@ var Pessoa = /** @class */ (function () {
     function Pessoa(nome) {
         this.nome = nome;
         this.numero = 0;
+        this.info();
     }
+    Pessoa.prototype.info = function () {
+        console.log(this.nome, this.numero);
+    };
     return Pessoa;
 }());
 // SUPER CLASSE
-// Criando uma pessoa Física a partir da classe Pessoa
+// Cri a partir da classe Pessoa
 var PessoaFisica = /** @class */ (function (_super) {
     __extends(PessoaFisica, _super);
     function PessoaFisica(nome) {
@@ -41,12 +45,17 @@ var PessoaFisica = /** @class */ (function (_super) {
     PessoaFisica.prototype.concederCertidao = function () {
         this.certidaoNascimento = true;
     };
+    //public info(){
+    //     super.info();
+    //     console.log(this.)
+    // }
+    //Chamar um método da classe pai sem precisar colocá-lo como protected
     PessoaFisica.prototype.concederCPF = function () {
         if (this.certidaoNascimento) {
             var numeroDeCPF = Math.floor(Math.random() * 99999999999);
             var numCPFString = numeroDeCPF.toString().padStart(11, '0');
-            var digitosVerificadores = Math.floor(Math.random() * 99)
-                .toString().padStart(2, "0");
+            var digitosVerificadores = Math.floor(Math.random() * 99);
+            toString().padStart(2, "0");
             var cpfFormatado = numCPFString.slice(0, 3) +
                 "." +
                 numCPFString.slice(3, 6) +

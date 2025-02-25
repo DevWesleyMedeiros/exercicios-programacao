@@ -1,6 +1,6 @@
 class Produto {
 
-    protected products: { product: string, price: number }[];
+    protected products: { product: string, price: number }[];  //[{}, {}, {}]
 
     constructor() {
         this.products = [];

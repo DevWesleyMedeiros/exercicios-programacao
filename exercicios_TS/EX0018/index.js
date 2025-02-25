@@ -1,4 +1,3 @@
-"use strict";
 /*
 Crie uma Factory para instanciar diferentes tipos de Produto com base no tipo de produto escolhido. Por exemplo, Livro ou Livro eletrônico.
 
@@ -13,23 +12,34 @@ O padrão de fábrica permite que o cliente crie objetos sem precisar conhecer a
 QUANDO EU DEVO USÁ-LO: este padrão é útil quando a criação de um objeto é complexa ou quando você não sabe de antemão qual classe deverá ser instanciada.
 
 */
-class LivrosEmPapel {
-    selecionarLivro() {
+var LivrosEmPapel = /** @class */ (function () {
+    function LivrosEmPapel() {
+    }
+    LivrosEmPapel.prototype.selecionarLivro = function () {
         return "Livro em papel escolhido";
+    };
+    return LivrosEmPapel;
+}());
+var LivroDigital = /** @class */ (function () {
+    function LivroDigital() {
     }
-}
-class LivroDigital {
-    selecionarLivro() {
+    LivroDigital.prototype.selecionarLivro = function () {
         return "Livro digital escolhido";
+    };
+    return LivroDigital;
+}());
+var LivroEmAudio = /** @class */ (function () {
+    function LivroEmAudio() {
     }
-}
-class LivroEmAudio {
-    selecionarLivro() {
+    LivroEmAudio.prototype.selecionarLivro = function () {
         return "Livro em áudio escolhido";
+    };
+    return LivroEmAudio;
+}());
+var FactoryLivros = /** @class */ (function () {
+    function FactoryLivros() {
     }
-}
-class FactoryLivros {
-    static escolherTipoLivro(tipo) {
+    FactoryLivros.escolherTipoLivro = function (tipo) {
         tipo = tipo.toLocaleUpperCase().trim();
         if (tipo === "") {
             throw new Error("Tipo de livro não selecionado");
@@ -44,8 +54,9 @@ class FactoryLivros {
             default:
                 throw new Error("Tipo de livro desconhecido");
         }
-    }
-}
+    };
+    return FactoryLivros;
+}());
 var TiposDeLivro;
 (function (TiposDeLivro) {
     TiposDeLivro["LivroEmPapel"] = "Livro em papel";
@@ -54,10 +65,10 @@ var TiposDeLivro;
 })(TiposDeLivro || (TiposDeLivro = {}));
 try {
     // A string precisa ser compatível com os tipos do enum TiposDeLivro
-    const tipoLivroEscolhido = TiposDeLivro.LivroDigital; // Ou qualquer outro valor do enum
-    const meuLivro = FactoryLivros.escolherTipoLivro(tipoLivroEscolhido);
+    var tipoLivroEscolhido = TiposDeLivro.LivroDigital; // Ou qualquer outro valor do enum
+    var meuLivro = FactoryLivros.escolherTipoLivro(tipoLivroEscolhido);
     console.log(meuLivro.selecionarLivro());
 }
 catch (error) {
-    console.error(`Erro: ${error.message}`);
+    console.error("Erro: ".concat(error.message));
 }

@@ -1,72 +1,96 @@
 "use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.HumanBeing = void 0;
 var HumanBeing;
 (function (HumanBeing) {
-    class Person {
-        name;
-        age;
-        constructor(name, age) {
+    var Person = /** @class */ (function () {
+        function Person(name, age) {
             this.name = name;
             this.age = age;
         }
-        personSpeak() {
-            console.log(`${this.name} is speaking with you.`);
-        }
-        personInfo() {
-            console.log(`My name is ${this.name} and I'm ${this.age} years old.`);
-        }
-    }
+        Person.prototype.personSpeak = function () {
+            console.log("".concat(this.name, " is speaking with you."));
+        };
+        Person.prototype.personInfo = function () {
+            console.log("My name is ".concat(this.name, " and I'm ").concat(this.age, " years old."));
+        };
+        return Person;
+    }());
     HumanBeing.Person = Person;
-    class Student extends Person {
-        school;
-        constructor(name, age, school) {
-            super(name, age); // Chama o construtor da classe base Person
-            this.school = school;
+    var Student = /** @class */ (function (_super) {
+        __extends(Student, _super);
+        function Student(name, age, school) {
+            var _this = _super.call(this, name, age) || this; // Chama o construtor da classe base Person
+            _this.school = school;
+            return _this;
         }
         // Novo método exclusivo para a classe Student
-        studentSchool() {
-            console.log(`The student studies at ${this.school}.`);
-        }
+        Student.prototype.studentSchool = function () {
+            console.log("The student studies at ".concat(this.school, "."));
+        };
         // Sobrescrevendo o método personInfo para incluir informações específicas do Student
-        personInfo() {
-            super.personInfo(); // Chama o método da classe base Person
-            console.log(`Student studies at ${this.school}.`);
-        }
-        studentSpeak() {
-            super.personSpeak();
-            console.log(`${this.name} is speaking to me.`);
-        }
-        // Setter para alterar a escola do aluno
-        set setSchool(school) {
-            if (school.length > 0) {
-                try {
-                    // Validando que a escola não deve ser um número
-                    if (!Number.isNaN(Number(school))) {
-                        throw new Error("School name cannot be a number.");
+        Student.prototype.personInfo = function () {
+            _super.prototype.personInfo.call(this); // Chama o método da classe base Person
+            console.log("Student studies at ".concat(this.school, "."));
+        };
+        Student.prototype.studentSpeak = function () {
+            _super.prototype.personSpeak.call(this);
+            console.log("".concat(this.name, " is speaking to me."));
+        };
+        Object.defineProperty(Student.prototype, "setSchool", {
+            // Setter para alterar a escola do aluno
+            set: function (school) {
+                if (school.length > 0) {
+                    try {
+                        // Validando que a escola não deve ser um número
+                        if (!Number.isNaN(Number(school))) {
+                            throw new Error("School name cannot be a number.");
+                        }
+                        // Se a validação passar, atualiza a escola
+                        this.school = school;
+                        console.log("School name updated successfully.");
                     }
-                    // Se a validação passar, atualiza a escola
-                    this.school = school;
-                    console.log("School name updated successfully.");
+                    catch (error) {
+                        console.error(error.message);
+                    }
                 }
-                catch (error) {
-                    console.error(error.message);
+                else {
+                    console.error("School name cannot be empty.");
                 }
-            }
-            else {
-                console.error("School name cannot be empty.");
-            }
-        }
-        // Getter para acessar o nome da escola
-        get schoolInfo() {
-            return this.school;
-        }
-    }
+            },
+            enumerable: false,
+            configurable: true
+        });
+        Object.defineProperty(Student.prototype, "schoolInfo", {
+            // Getter para acessar o nome da escola
+            get: function () {
+                return this.school;
+            },
+            enumerable: false,
+            configurable: true
+        });
+        return Student;
+    }(Person));
     HumanBeing.Student = Student;
 })(HumanBeing || (exports.HumanBeing = HumanBeing = {}));
 // Criando objetos da classe Person e Student
-const Me = new HumanBeing.Person("Wesley", 26);
-const meAsAStudent = new HumanBeing.Student("Wesley Medeiros", 26, "Danki Code");
+var Me = new HumanBeing.Person("Wesley", 26);
+var meAsAStudent = new HumanBeing.Student("Wesley Medeiros", 26, "Danki Code");
 // Chamando métodos da classe base Person
 Me.personSpeak();
 Me.personInfo();

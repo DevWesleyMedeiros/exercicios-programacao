@@ -14,8 +14,8 @@ class Pessoa {
 }
 // SUPER CLASSE
   
-// Criando uma pessoa Física a partir da classe Pessoa
-class PessoaFisica extends Pessoa {
+// Cri a partir da classe Pessoa
+class PessoaFisica extends Pessoa {ando uma pessoa Física
     protected nomePf: string = "";
     protected idade: number;
     private nasceu: boolean = false;
@@ -44,7 +44,7 @@ class PessoaFisica extends Pessoa {
         if (this.certidaoNascimento) {
             let numeroDeCPF: number = Math.floor(Math.random() * 99999999999);
             let numCPFString: string = numeroDeCPF.toString().padStart(11, '0');
-            let digitosVerificadores: string = Math.floor(Math.random() * 99)
+            let digitosVerificadores: string = Math.floor(Math.random() * 99);
                 .toString().padStart(2, "0");
             let cpfFormatado =
                 numCPFString.slice(0, 3) +

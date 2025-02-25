@@ -1,37 +1,42 @@
-"use strict";
 // Exemplo de injeção de dependência ultilizando interfaces
 // Uma INTERFACE mais leve, usada para definir apenas contratos.
 // Classes de baixo nível operacional que envia Email - implementação concreta
-class NotificacaoEmail {
-    enviarNotificacao(notificacaoPorEmail, mensagem) {
-        console.log(`Email: ${notificacaoPorEmail} \n Mensagem: ${mensagem}`);
+var NotificacaoEmail = /** @class */ (function () {
+    function NotificacaoEmail() {
     }
-}
+    NotificacaoEmail.prototype.enviarNotificacao = function (notificacaoPorEmail, mensagem) {
+        console.log("Email: ".concat(notificacaoPorEmail, " \n Mensagem: ").concat(mensagem));
+    };
+    return NotificacaoEmail;
+}());
 // Classes de baixo nível operacional que envia SMS - implementação concreta
-class NotificacaoSMS {
-    enviarNotificacao(notificacaoPorSMS, mensagem) {
-        console.log(`SMS: ${notificacaoPorSMS} \n Mensagem: ${mensagem}`);
+var NotificacaoSMS = /** @class */ (function () {
+    function NotificacaoSMS() {
     }
-}
+    NotificacaoSMS.prototype.enviarNotificacao = function (notificacaoPorSMS, mensagem) {
+        console.log("SMS: ".concat(notificacaoPorSMS, " \n Mensagem: ").concat(mensagem));
+    };
+    return NotificacaoSMS;
+}());
 // Classe de alto nível (não depende mais diretamente das implementações concretas - baixo nível, mas sim da abstração EnvioNotificacao)
-class NotificacaoUsuario {
-    servicoNotificacaoUsuario;
+var NotificacaoUsuario = /** @class */ (function () {
     // Parte do código que faz um injeção de dependência
-    constructor(servicoNotificacaoUsuario) {
+    function NotificacaoUsuario(servicoNotificacaoUsuario) {
         this.servicoNotificacaoUsuario = servicoNotificacaoUsuario;
     }
     // Método para enviar a notificação da própria classe
-    notificarUsuario(notificacao, mensagem) {
+    NotificacaoUsuario.prototype.notificarUsuario = function (notificacao, mensagem) {
         this.servicoNotificacaoUsuario.enviarNotificacao(notificacao, mensagem);
-    }
-}
+    };
+    return NotificacaoUsuario;
+}());
 // Enviando notificações por Email
-const email = new NotificacaoEmail();
-const usuarioEmail = new NotificacaoUsuario(email);
+var email = new NotificacaoEmail();
+var usuarioEmail = new NotificacaoUsuario(email);
 usuarioEmail.notificarUsuario("devwesleymedeiros@outlook.com", "Email");
 // Enviado uma notificação por mensagem
-const mensagem = new NotificacaoSMS();
-const usuarioSMS = new NotificacaoUsuario(mensagem);
+var mensagem = new NotificacaoSMS();
+var usuarioSMS = new NotificacaoUsuario(mensagem);
 usuarioSMS.notificarUsuario("Olá, mundo", "SMS");
 /*
 "NotificacaoUsuario" depende da abstração "EnvioNotificacao", e não das implementações concretas de "NotificacaoEmail" ou "NotificacaoSMS". Isso permite que você substitua a implementação concreta sem modificar a classe NotificacaoUsuario.

@@ -1,24 +1,25 @@
-"use strict";
 // Criar polimorfismo simples. Crie duas class gato e cachorro ambas com o método falar. Em seguida, crie um método que recebe um animal e chame o método falar
-class Cat {
-    cat = "CAT";
-    constructor() {
-        console.log(`This animal is a ${this.cat}`);
+var Cat = /** @class */ (function () {
+    function Cat() {
+        this.cat = "CAT";
+        console.log("This animal is a ".concat(this.cat));
     }
-    makingSound() {
+    Cat.prototype.makingSound = function () {
         return "MIAUuu";
+    };
+    return Cat;
+}());
+var Dog = /** @class */ (function () {
+    function Dog() {
+        this.dog = "DOG";
+        console.log("This animal is a ".concat(this.dog));
     }
-}
-class Dog {
-    dog = "DOG";
-    constructor() {
-        console.log(`This animal is a ${this.dog}`);
-    }
-    makingSound() {
+    Dog.prototype.makingSound = function () {
         return "AUAULL";
-    }
-}
-const animal = (animal) => {
+    };
+    return Dog;
+}());
+var animal = function (animal) {
     try {
         console.log(animal.makingSound());
     }
@@ -26,7 +27,7 @@ const animal = (animal) => {
         console.error("Erro: " + error.message);
     }
 };
-const cat = new Cat();
-const dog = new Dog();
+var cat = new Cat();
+var dog = new Dog();
 animal(cat);
 animal(dog);
