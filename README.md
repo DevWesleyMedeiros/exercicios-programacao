@@ -112,7 +112,3 @@ Se você quiser contribuir, siga as etapas abaixo:
 Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
-
-Sinta-se à vontade para personalizar o conteúdo deste README conforme a sua necessidade, como adicionar mais detalhes sobre cada exercício, ou personalizar o fluxo de execução para os seus projetos.
-
-Boa sorte com o seu repositório!
