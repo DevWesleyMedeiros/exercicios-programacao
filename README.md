@@ -68,8 +68,11 @@ Para executar os exercícios em JavaScript ou TypeScript, siga os passos abaixo:
     cd exercicios-programacao/EXERCICIOS.JS
     cd exercicios-logica-programacao/EXERCICIOS_TS
     ```
-
-3. Execute o exercício:
+3. Lembre-se de que os exercícios estão na branch **exercícios**, portanto, antes de os iniciar, entre na bracnh exercícios como o comando
+    ```bash
+    git checkout exercícios
+    ```
+4. Execute o exercício:
     ```bash
     node exercício1.js
     ```
