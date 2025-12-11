@@ -1,24 +1,25 @@
 {
   "compilerOptions": {
-    "target": "ESNext",                          // Mantém o alvo de compilação para a versão mais recente do ECMAScript
-    "useDefineForClassFields": true,              // Para uma definição mais precisa de campos de classe
-    "module": "ESNext",                           // Usa módulos ECMAScript mais modernos
-    "lib": ["ESNext", "DOM", "DOM.Iterable"],     // Bibliotecas necessárias para o ambiente do navegador
-    "skipLibCheck": true,                         // Ignora checagem de tipos em arquivos de definição de bibliotecas
-    "moduleResolution": "node",                   // Uso do modelo de resolução de módulos compatível com o Node.js
-    "allowImportingTsExtensions": true,           // Permite a importação de arquivos .ts e .tsx
-    "isolatedModules": true,                      // Garante que cada arquivo será tratado como um módulo isolado
-    "moduleDetection": "force",                   // Força a detecção do módulo, útil para ambientes de construção
-    "noEmit": true,                               // Não emite arquivos de saída (útil apenas para verificação de tipos)
-    "strict": true,                               // Ativa todas as verificações rigorosas de tipos
-    "noUnusedLocals": true,                       // Marca como erro se houver variáveis locais não utilizadas
-    "noUnusedParameters": true,                   // Marca como erro se houver parâmetros não utilizados
-    "noFallthroughCasesInSwitch": true,           // Impede "fall-through" (casos sem "break" no switch)
-    "noUncheckedSideEffectImports": true,         // Marca como erro imports com efeitos colaterais não verificados
-    "esModuleInterop": true,                      // Facilita a interoperabilidade com módulos CommonJS
-    "skipDefaultLibCheck": true                   // Ignora a verificação do arquivo de bibliotecas padrão (default)
+    "ignoreDeprecations": "6.0", // Silencia erros de deprecação do TypeScript 6.0
+    "target": "ESNext", // Mantém o alvo de compilação para a versão mais recente do ECMAScript
+    "useDefineForClassFields": true, // Para uma definição mais precisa de campos de classe
+    "module": "ESNext", // Usa módulos ECMAScript mais modernos
+    "lib": ["ESNext", "DOM", "DOM.Iterable"], // Bibliotecas necessárias para o ambiente do navegador
+    "skipLibCheck": true, // Ignora checagem de tipos em arquivos de definição de bibliotecas
+    "moduleResolution": "NodeNext", // Uso do modelo de resolução de módulos compatível com o Node.js
+    "allowImportingTsExtensions": true, // Permite a importação de arquivos .ts e .tsx
+    "isolatedModules": true, // Garante que cada arquivo será tratado como um módulo isolado
+    "moduleDetection": "force", // Força a detecção do módulo, útil para ambientes de construção
+    "noEmit": true, // Não emite arquivos de saída (útil apenas para verificação de tipos)
+    "strict": true, // Ativa todas as verificações rigorosas de tipos
+    "noUnusedLocals": true, // Marca como erro se houver variáveis locais não utilizadas
+    "noUnusedParameters": true, // Marca como erro se houver parâmetros não utilizados
+    "noFallthroughCasesInSwitch": true, // Impede "fall-through" (casos sem "break" no switch)
+    "noUncheckedSideEffectImports": true, // Marca como erro imports com efeitos colaterais não verificados
+    "esModuleInterop": true, // Facilita a interoperabilidade com módulos CommonJS
+    "skipDefaultLibCheck": true // Ignora a verificação do arquivo de bibliotecas padrão (default)
   },
   "exclude": [
-    "node_modules"                                // Excluir a pasta node_modules da compilação
+    "node_modules" // Excluir a pasta node_modules da compilação
   ]
 }
