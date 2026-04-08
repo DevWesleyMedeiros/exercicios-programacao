@@ -45,7 +45,7 @@ exercicios-logica-programacao/
 
 ## Objetivo
 
-O objetivo deste repositório é mostrar minha habilidade em resolver problemas de programação utilizando várias linguagens. Cada exercício foi resolvido com base em conceitos fundamentais de lógica de programação, como:
+O objetivo deste repositório é demonstrar minhas habilidades para resolver desafios de programação em várias linguagens. Cada exercício foi resolvido com base em conceitos fundamentais de lógica de programação, como:
 
 - Estruturas condicionais
 - Laços de repetição
