@@ -74,6 +74,7 @@ class DevBackend extends Dev {
   }
 }
 
+// classe abstrata aqui significa que ela não pode ser instanciada diretamente, ou seja, não podemos criar um objeto do tipo CountryDeveloper. Ela serve como um modelo para outras classes que irão herdar suas propriedades e métodos. As subclasses devem implementar o método abstrato develop(), que é obrigatório para todas as classes que estendem CountryDeveloper.
 abstract class CountryDeveloper {
   protected countryName: string;
   readonly devAge: number;

@@ -1,0 +1,14 @@
+// classe para evitar números mágicos
+/* static é modificador de acesso que permite acessar o membro da classe sem instanciá-la e readonly é um modificador que torna a propriedade somente leitura */
+
+/* respeita princípio de responsabilidade única, pois a classe Barbecue é responsável apenas por armazenar as informações do churrasco, enquanto a classe MeatCostsCalculatorPerPerson é responsável por calcular a quantidade de carne necessária por pessoa. Dessa forma, cada classe tem uma única responsabilidade, o que torna o código mais organizado e fácil de manter. */
+
+// classe para calcular o custo total do churrasco e o custo por pessoa, respeitando o princípio de responsabilidade única, pois cada classe tem uma única responsabilidade. A classe TotalCostCalculator é responsável apenas por calcular o custo total do churrasco e o custo por pessoa, enquanto a classe Barbecue é responsável apenas por armazenar as informações do churrasco e exibir as informações relevantes. Dessa forma, cada classe tem uma única responsabilidade, o que torna o código mais organizado e fácil de manter.
+
+// sugestion 1: evitar números mágicos, ou seja, valores numéricos que aparecem no código sem uma explicação clara do que representam. No exemplo acima, o valor 0.4 (que representa 400g por pessoa) e o preço por kg (82.4) são números mágicos. Para melhorar a legibilidade do código, seria melhor definir constantes para esses valores, como MEAT_PER_PERSON e PRICE_PER_KG, respectivamente. Isso tornaria o código mais fácil de entender e manter.
+
+// sugestion 2: DRY (Don't Repeat Yourself), ou seja, evitar a repetição de código. No exemplo acima, o cálculo da quantidade de carne necessária é feito em vários métodos diferentes (showMeatAmount, showTotalCost e showCostPerPerson). Para evitar essa repetição, seria melhor criar um método separado para calcular a quantidade de carne necessária e chamá-lo nos outros métodos. Isso tornaria o código mais organizado e fácil de manter.
+
+// sugestion 3: Agrupar Lógicas Semelhantes: As duas classes de custo (TotalCostCalculator e BarbecueTotalCostPerPerson) podem ser métodos dentro de uma única classe CostCalculator, já que ambas lidam com o dinheiro do churrasco. Isso reduziria a quantidade de classes e tornaria o código mais coeso, já que todas as lógicas relacionadas ao custo estariam em um único lugar. Além disso, isso facilitaria a manutenção do código, pois todas as mudanças relacionadas ao custo poderiam ser feitas em um único local.
+
+// Segue a ordem de alocação de cada classe para facilitar a leitura e organização do código. A classe Constants é a primeira, seguida pelas classes de cálculo (MeatCostsCalculatorPerPerson e TotalCostCalculator), a classe Barbecue que utiliza as outras para gerar o relatório completo e e, por fim, instanciamos a classe Barbecue e chamamos o método showFullReport para exibir o relatório completo do churrasco.
