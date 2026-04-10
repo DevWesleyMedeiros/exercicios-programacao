@@ -5,23 +5,30 @@ interface Animal{
     especie:string;
     animalFalar():string;
 }
+class Zoologico implements Animal {
+  arrayAnimais: Animal[]
+  nome: string
+  especie: string
 
-class Zoologico implements Animal{
-    arrayAnimais:Animal[]
-    constructor(){
-        this.arrayAnimais = [];
+  constructor(nome: string = '', especie: string = '') {
+    this.arrayAnimais = []
+    this.nome = nome
+    this.especie = especie
+  }
+  animalFalar(): string {
+    throw new Error('Method not implemented.')
+  }
+  adicionarAnimais(nome: string, especie: string): void {
+    const animal: Animal = {
+      nome,
+      especie,
+      animalFalar: () => `O animal ${nome} da espécie ${especie} esta fazendo um SOM`,
     }
-    adicionarAnimais(nome:string, especie:string):void{
-        const animal:Animal = {
-            nome, 
-            especie,
-            animalFalar: () => `O animal ${nome} da espécie ${especie} esta fazendo um SOM`,
-        }
-        this.arrayAnimais.push(animal);
-    }
-    animalEmitindoSom():void{
-        this.arrayAnimais.forEach((animal)=> console.log(animal.animalFalar()));
-    }
+    this.arrayAnimais.push(animal)
+  }
+  animalEmitindoSom(): void {
+    this.arrayAnimais.forEach((animal) => console.log(animal.animalFalar()))
+  }
 }
 const novoAnimal = new Zoologico();
 novoAnimal.adicionarAnimais("Leão", "Pantera Leo");

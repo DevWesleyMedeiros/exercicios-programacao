@@ -18,6 +18,7 @@ class Carro {
             // Verificar se o tipo é 'number' e se é um valor inteiro válido
             if (typeof newYear !== 'number') {
                 throw new Error('O ano deve ser um número.');
+                // sempre após lançar um erro, o código para de ser executado, então não é necessário usar 'else' aqui
             }
 
             if (!Number.isInteger(newYear)) {
@@ -47,7 +48,7 @@ console.log(golzinho.carInfo);
 console.log("------------------------------------------------------");
 
 console.log("Tentando alterar o ano para um valor inválido: ");
-golzinho.newCarYear = "2015";  // Valor inválido (string)
+// golzinho.newCarYear = "2015";  // Valor inválido (string)
 console.log(golzinho.carInfo);
 console.log("------------------------------------------------------");
 

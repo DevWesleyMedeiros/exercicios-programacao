@@ -4,25 +4,25 @@ interface Animal{
     makingSound():string;
 }
 
-class Cat implements Animal{
-    private cat:string = "CAT";
+class Cat implements Animal {
+  private cat: string = 'CAT'
 
-    constructor(){
-        console.log(`This animal is a ${this.cat}`)
-    }
-    makingSound(): string {
-        return "MIAUuu";
-    }
+  constructor() {
+    console.log(`This animal is a ${this.cat}`)
+  }
+  makingSound(): string {
+    return 'MIAUuu'
+  }
 }
-class Dog implements Animal{
-    private dog:string = "DOG";
+class Dog implements Animal {
+  private dog: string = 'DOG'
 
-    constructor(){
-        console.log(`This animal is a ${this.dog}`)
-    }
-    makingSound(): string {
-        return "AUAULL";
-    }
+  constructor() {
+    console.log(`This animal is a ${this.dog}`)
+  }
+  makingSound(): string {
+    return 'AUAULL'
+  }
 }
 const animal = (animal:Animal)=>{
     try {

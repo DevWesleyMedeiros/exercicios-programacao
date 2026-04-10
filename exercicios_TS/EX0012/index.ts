@@ -21,7 +21,9 @@ class BankingAccount {
                 throw new Error("O valor do depósito deve ser maior que zero");
             }
         } catch (error) {
-            console.error(error.message);
+            if (error instanceof Error) {
+                console.error(error.message);
+            }
         } finally {
             console.log("Operação de depósito finalizada");
         }
@@ -40,7 +42,9 @@ class BankingAccount {
 
             this.saldo -= retirada;
         } catch (error) {
-            console.error(error.message);
+            if (error instanceof Error) {
+                console.error(error.message);
+            }
         } finally {
             console.log("Operação de retirada finalizada");
         }
