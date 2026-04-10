@@ -6,9 +6,9 @@
   "scripts": {
     "watch": "tsc --watch"
   },
-  "author": "",
+  "author": "Wesley Medeiros",
   "license": "ISC",
-  "description": "",
+  "description": "Lista de exercícios de programação com TypeScript e orientação a objetos",
   "devDependencies": {
     "typescript": "^6.0.2"
   }
