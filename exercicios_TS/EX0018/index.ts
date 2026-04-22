@@ -67,6 +67,6 @@ try {
     const tipoLivroEscolhido = TiposDeLivro.LivroDigital; // Ou qualquer outro valor do enum
     const meuLivro = FactoryLivros.escolherTipoLivro(tipoLivroEscolhido);
     console.log(meuLivro.selecionarLivro());
-} catch (error: any) {
+} catch (error: Error) {
     console.error(`Erro: ${error.message}`);
 }

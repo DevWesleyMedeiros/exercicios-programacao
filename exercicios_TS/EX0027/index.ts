@@ -64,6 +64,7 @@ class BookNavigator {
     )
   }
 
+  // método da classe BookNavegator que avança para uma determinada página
   advance(pages: number): void {
     const target = this.currentPage + pages
     if (target > this.book.totalPages) {
@@ -73,6 +74,7 @@ class BookNavigator {
     this.updateCurrentPage(target, `Avançou ${pages} páginas.`)
   }
 
+  // método da classe BookNavegator que volta para uma determinada página
   goBack(pages: number): void {
     const target = this.currentPage - pages
     if (target < 1) {
@@ -82,6 +84,7 @@ class BookNavigator {
     this.updateCurrentPage(target, `Voltou ${pages} páginas.`)
   }
 
+  // método da classe BookNavegator que vai para uma determinada página
   goTo(page: number): void {
     if (page < 1 || page > this.book.totalPages) {
       this.notifier.notify(`Erro: Página ${page} inválida.`)

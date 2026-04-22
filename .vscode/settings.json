@@ -1,0 +1,4 @@
+{
+  "chat.planAgent.defaultModel": "",
+  "chat.exploreAgent.defaultModel": "Auto (copilot)"
+}
